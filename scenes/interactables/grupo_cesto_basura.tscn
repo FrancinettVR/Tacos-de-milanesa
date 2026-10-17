@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b5lbil4w8oko3"]
+
+[ext_resource type="Script" uid="uid://bdx3yeneg0k6s" path="res://scenes/interactables/cesto.gd" id="1_mgi1p"]
+[ext_resource type="Texture2D" uid="uid://bk12utax1ym7q" path="res://assets/art/interactables/placeholders/spr_cesto_vacio.png" id="1_nx6ht"]
+[ext_resource type="Texture2D" uid="uid://bscwde6dgdu5y" path="res://assets/art/interactables/placeholders/spr_basura.png" id="2_mgi1p"]
+[ext_resource type="Script" uid="uid://cj04qd74aqg2j" path="res://scenes/interactables/basura.gd" id="3_td8i6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jxqo"]
+size = Vector2(216, 198)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_td8i6"]
+size = Vector2(128, 116)
+
+[node name="Grupo-cesto-basura" type="Node2D" unique_id=1693243512]
+
+[node name="Cesto" type="Area2D" parent="." unique_id=742308669]
+position = Vector2(960, 540)
+script = ExtResource("1_mgi1p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cesto" unique_id=1826662144]
+texture = ExtResource("1_nx6ht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cesto" unique_id=1559214539]
+position = Vector2(5, 75)
+shape = SubResource("RectangleShape2D_8jxqo")
+
+[node name="Basura" type="Area2D" parent="." unique_id=1759931558 node_paths=PackedStringArray("cesto")]
+position = Vector2(760, 540)
+script = ExtResource("3_td8i6")
+cesto = NodePath("../Cesto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Basura" unique_id=504437650]
+texture = ExtResource("2_mgi1p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basura" unique_id=25524458]
+position = Vector2(1, 9)
+shape = SubResource("RectangleShape2D_td8i6")
+
+[node name="Basura2" type="Area2D" parent="." unique_id=1683192737 node_paths=PackedStringArray("cesto")]
+position = Vector2(320, 540)
+script = ExtResource("3_td8i6")
+cesto = NodePath("../Cesto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Basura2" unique_id=1272800586]
+texture = ExtResource("2_mgi1p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basura2" unique_id=545344602]
+position = Vector2(1, 9)
+shape = SubResource("RectangleShape2D_td8i6")

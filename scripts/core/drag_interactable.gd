@@ -29,6 +29,9 @@ func soltar() -> void:
 	arrastrando = false
 	if objetivo_valido():
 		intentar_interactuar()
+	resolver_posicion_final()
+
+func resolver_posicion_final() -> void:
 	position = posicion_inicial
 
 # El hijo define qué significa "estar en el lugar correcto"
