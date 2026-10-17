@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bukkpu717fis7"]
+
+[ext_resource type="Script" uid="uid://2iijyypjxj4u" path="res://scenes/characters/protagonist.gd" id="1_o6kgp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m2g58"]
+radius = 140.0
+height = 650.0
+
+[node name="Protagonist" type="CharacterBody2D" unique_id=1674399434]
+script = ExtResource("1_o6kgp")
+
+[node name="Visual" type="Node2D" parent="." unique_id=2095489844]
+
+[node name="CoatBody" type="ColorRect" parent="Visual" unique_id=859998164]
+offset_left = -140.0
+offset_top = -325.0
+offset_right = 140.0
+offset_bottom = 325.0
+color = Color(0.204, 0.286, 0.369, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1969937216]
+shape = SubResource("CapsuleShape2D_m2g58")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1757113225]
+position = Vector2(0, -200)
+limit_left = 0
+limit_top = 0
+limit_right = 5760
+limit_bottom = 1080
+position_smoothing_enabled = true
+editor_draw_limits = true
