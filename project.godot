@@ -14,6 +14,10 @@ config/name="Tacos de milanesa"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EventBus="*uid://bjqd106s8ddqg"
+
 [display]
 
 window/size/viewport_width=1920
