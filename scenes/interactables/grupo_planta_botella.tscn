@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dlioi8unl6dd5"]
+
+[ext_resource type="Script" uid="uid://d3jqsuh4ywgpb" path="res://scripts/interactables-scripts/planta.gd" id="1_xeglg"]
+[ext_resource type="Texture2D" uid="uid://cs6bysnrxrkqg" path="res://assets/art/interactables/placeholders/spr_planta_seca.png" id="2_neny4"]
+[ext_resource type="Script" uid="uid://t4i2jk3vu6i4" path="res://scripts/interactables-scripts/botella.gd" id="3_aodf0"]
+[ext_resource type="Texture2D" uid="uid://dwed7llket15j" path="res://assets/art/interactables/placeholders/spr_botella_llena.png" id="3_m7ymp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(254, 307)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtglo"]
+size = Vector2(57, 141)
+
+[node name="Grupo-planta-botella" type="Node2D" unique_id=1969240675]
+
+[node name="Planta" type="Area2D" parent="." unique_id=2057492867]
+position = Vector2(960, 540)
+script = ExtResource("1_xeglg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planta" unique_id=676090356]
+texture = ExtResource("2_neny4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta" unique_id=695305312]
+position = Vector2(-2, 20.5)
+shape = SubResource("RectangleShape2D_u0ya7")
+
+[node name="Botella" type="Area2D" parent="." unique_id=802681578 node_paths=PackedStringArray("planta")]
+position = Vector2(1160, 540)
+script = ExtResource("3_aodf0")
+planta = NodePath("../Planta")
+
+[node name="Sprite2D" type="Sprite2D" parent="Botella" unique_id=1899449396]
+position = Vector2(-453, -37)
+texture = ExtResource("3_m7ymp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Botella" unique_id=226884821]
+position = Vector2(-455, -14)
+shape = SubResource("RectangleShape2D_dtglo")
