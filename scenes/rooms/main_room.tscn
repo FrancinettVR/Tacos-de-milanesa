@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dct7xj0iouk7j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
+size = Vector2(5760, 1080)
+
+[node name="MainRoom" type="Node2D" unique_id=394292029]
+
+[node name="Env" type="Node2D" parent="." unique_id=1265365445]
+
+[node name="Background" type="ColorRect" parent="Env" unique_id=98105340]
+offset_right = 5760.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.6814234, 0.6814234, 0.6814234, 1)
+
+[node name="Floor" type="ColorRect" parent="Env" unique_id=1909697501]
+offset_top = 1040.0
+offset_right = 5760.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=291796662]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=149278725]
+position = Vector2(2880, 540)
+shape = SubResource("RectangleShape2D_m2g58")
