@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cms1ub5xbi13d"]
+
+[ext_resource type="Script" uid="uid://bsgptkdnlkuq1" path="res://scenes/ui/dialogue_ui.gd" id="1_y3syv"]
+
+[node name="DialogueUI" type="CanvasLayer" unique_id=1301810073]
+script = ExtResource("1_y3syv")
+
+[node name="PanelDialogo" type="Panel" parent="." unique_id=1756766092]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -300.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ContenedorOpciones" type="HBoxContainer" parent="PanelDialogo" unique_id=64146187]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
