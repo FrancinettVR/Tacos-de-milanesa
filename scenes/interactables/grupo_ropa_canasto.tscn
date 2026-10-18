@@ -1,83 +1,169 @@
 [gd_scene format=3 uid="uid://c6u7q4m2vw8xy"]
 
-[ext_resource type="Script" path="res://scenes/interactables/canasto.gd" id="1_canasto"]
-[ext_resource type="Script" path="res://scenes/interactables/ropa.gd" id="2_ropa"]
+[ext_resource type="Script" uid="uid://ccq2wjym0u44o" path="res://scenes/interactables/canasto.gd" id="1_canasto"]
+[ext_resource type="Texture2D" uid="uid://dq5elmq7skago" path="res://assets/art/Zona1/Referencia.jpg" id="1_s3y41"]
+[ext_resource type="Texture2D" uid="uid://rppdbd35f0ed" path="res://assets/art/Zona2/Referencia.jpg" id="2_etmh6"]
+[ext_resource type="Script" uid="uid://batq5slj5knlk" path="res://scenes/interactables/ropa.gd" id="2_ropa"]
+[ext_resource type="Texture2D" uid="uid://dbv20qc2ria4a" path="res://assets/art/Zona1/Ropa1.png" id="3_ropa1"]
+[ext_resource type="Texture2D" uid="uid://cp5bhdrk87ypu" path="res://assets/art/Zona3/Referencia.jpg" id="3_sw2qt"]
+[ext_resource type="Texture2D" uid="uid://drcowhelwhlei" path="res://assets/art/Zona1/Ropa2.png" id="4_ropa2"]
+[ext_resource type="Texture2D" uid="uid://de6k5lo6sfv0a" path="res://assets/art/Zona2/Ropa3.png" id="5_ropa3"]
+[ext_resource type="Texture2D" uid="uid://ws32undiqxk8" path="res://assets/art/Zona3/Ropa4.png" id="6_ropa4"]
+[ext_resource type="Texture2D" uid="uid://bwirdxyuhv3e2" path="res://assets/art/Zona3/Ropa5.png" id="7_ropa5"]
+[ext_resource type="Texture2D" uid="uid://ca81udr1asudq" path="res://assets/art/Zona3/Ropa6.png" id="8_ropa6"]
+[ext_resource type="Texture2D" uid="uid://bpu1syieqhvk7" path="res://assets/art/Zona3/Ropa7.png" id="9_ropa7"]
+[ext_resource type="Texture2D" uid="uid://chnvyqjui0fgx" path="res://assets/art/Zona3/Ropa8.png" id="10_ropa8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_canasto"]
 size = Vector2(200, 160)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa"]
-size = Vector2(90, 80)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa1"]
+size = Vector2(227, 132)
 
-[node name="GrupoRopaCanasto" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa2"]
+size = Vector2(120, 272)
 
-[node name="Canasto" type="Area2D" parent="."]
-position = Vector2(600, 0)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa3"]
+size = Vector2(121, 266)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa4"]
+size = Vector2(181, 191)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa5"]
+size = Vector2(316, 134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa6"]
+size = Vector2(270, 93)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa7"]
+size = Vector2(236, 179)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa8"]
+size = Vector2(100, 112)
+
+[node name="GrupoRopaCanasto" type="Node2D" unique_id=1788298796]
+
+[node name="ContenedorReferencias" type="Node2D" parent="." unique_id=1045477108]
+visible = false
+
+[node name="Zona1_Ref" type="Sprite2D" parent="ContenedorReferencias" unique_id=590521541]
+texture = ExtResource("1_s3y41")
+centered = false
+
+[node name="Zona2_Ref" type="Sprite2D" parent="ContenedorReferencias" unique_id=412526619]
+position = Vector2(1920, 0)
+texture = ExtResource("2_etmh6")
+centered = false
+
+[node name="Zona3_Ref" type="Sprite2D" parent="ContenedorReferencias" unique_id=1060319998]
+position = Vector2(3522, 0)
+texture = ExtResource("3_sw2qt")
+centered = false
+
+[node name="Canasto" type="Area2D" parent="." unique_id=314347367]
+position = Vector2(4320, 787)
 script = ExtResource("1_canasto")
 
-[node name="Sprite2D" type="Sprite2D" parent="Canasto"]
+[node name="Sprite2D" type="Sprite2D" parent="Canasto" unique_id=1220154793]
+visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Canasto"]
+[node name="ColorRect" type="ColorRect" parent="Canasto" unique_id=1597986359]
+visible = false
 offset_left = -100.0
 offset_top = -80.0
 offset_right = 100.0
 offset_bottom = 80.0
 mouse_filter = 2
 color = Color(0.62, 0.44, 0.28, 1)
+metadata/_edit_use_anchors_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Canasto"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canasto" unique_id=2065722943]
 shape = SubResource("RectangleShape2D_canasto")
 
-[node name="Ropa1" type="Area2D" parent="." node_paths=PackedStringArray("canasto")]
-position = Vector2(0, 40)
+[node name="Ropa1" type="Area2D" parent="." unique_id=63303164 node_paths=PackedStringArray("canasto")]
+position = Vector2(1287, 706)
 script = ExtResource("2_ropa")
 canasto = NodePath("../Canasto")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ropa1"]
+[node name="Sprite2D" type="Sprite2D" parent="Ropa1" unique_id=1710625428]
+texture = ExtResource("3_ropa1")
 
-[node name="ColorRect" type="ColorRect" parent="Ropa1"]
-offset_left = -45.0
-offset_top = -40.0
-offset_right = 45.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.24, 0.48, 0.85, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa1" unique_id=1040946284]
+shape = SubResource("RectangleShape2D_ropa1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa1"]
-shape = SubResource("RectangleShape2D_ropa")
-
-[node name="Ropa2" type="Area2D" parent="." node_paths=PackedStringArray("canasto")]
-position = Vector2(160, 40)
+[node name="Ropa2" type="Area2D" parent="." unique_id=1351262730 node_paths=PackedStringArray("canasto")]
+position = Vector2(1654, 924)
 script = ExtResource("2_ropa")
 canasto = NodePath("../Canasto")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ropa2"]
+[node name="Sprite2D" type="Sprite2D" parent="Ropa2" unique_id=399373001]
+texture = ExtResource("4_ropa2")
 
-[node name="ColorRect" type="ColorRect" parent="Ropa2"]
-offset_left = -45.0
-offset_top = -40.0
-offset_right = 45.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.85, 0.32, 0.32, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa2" unique_id=865306104]
+shape = SubResource("RectangleShape2D_ropa2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa2"]
-shape = SubResource("RectangleShape2D_ropa")
-
-[node name="Ropa3" type="Area2D" parent="." node_paths=PackedStringArray("canasto")]
-position = Vector2(320, 40)
+[node name="Ropa3" type="Area2D" parent="." unique_id=2070654649 node_paths=PackedStringArray("canasto")]
+position = Vector2(3246, 725)
 script = ExtResource("2_ropa")
 canasto = NodePath("../Canasto")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ropa3"]
+[node name="Sprite2D" type="Sprite2D" parent="Ropa3" unique_id=1475108673]
+texture = ExtResource("5_ropa3")
 
-[node name="ColorRect" type="ColorRect" parent="Ropa3"]
-offset_left = -45.0
-offset_top = -40.0
-offset_right = 45.0
-offset_bottom = 40.0
-mouse_filter = 2
-color = Color(0.3, 0.75, 0.45, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa3" unique_id=352175514]
+shape = SubResource("RectangleShape2D_ropa3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa3"]
-shape = SubResource("RectangleShape2D_ropa")
+[node name="Ropa4" type="Area2D" parent="." unique_id=2101159957 node_paths=PackedStringArray("canasto")]
+position = Vector2(4388, 784)
+script = ExtResource("2_ropa")
+canasto = NodePath("../Canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ropa4" unique_id=467578252]
+texture = ExtResource("6_ropa4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa4" unique_id=1315803199]
+shape = SubResource("RectangleShape2D_ropa4")
+
+[node name="Ropa5" type="Area2D" parent="." unique_id=389598420 node_paths=PackedStringArray("canasto")]
+position = Vector2(4500, 992)
+script = ExtResource("2_ropa")
+canasto = NodePath("../Canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ropa5" unique_id=423131512]
+texture = ExtResource("7_ropa5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa5" unique_id=379400329]
+shape = SubResource("RectangleShape2D_ropa5")
+
+[node name="Ropa6" type="Area2D" parent="." unique_id=1067523525 node_paths=PackedStringArray("canasto")]
+position = Vector2(4769, 776)
+script = ExtResource("2_ropa")
+canasto = NodePath("../Canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ropa6" unique_id=1715542012]
+texture = ExtResource("8_ropa6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa6" unique_id=989374826]
+shape = SubResource("RectangleShape2D_ropa6")
+
+[node name="Ropa7" type="Area2D" parent="." unique_id=926554323 node_paths=PackedStringArray("canasto")]
+position = Vector2(4818, 861)
+script = ExtResource("2_ropa")
+canasto = NodePath("../Canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ropa7" unique_id=1369760453]
+texture = ExtResource("9_ropa7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa7" unique_id=770317533]
+shape = SubResource("RectangleShape2D_ropa7")
+
+[node name="Ropa8" type="Area2D" parent="." unique_id=1007251649 node_paths=PackedStringArray("canasto")]
+position = Vector2(5061, 861)
+script = ExtResource("2_ropa")
+canasto = NodePath("../Canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ropa8" unique_id=799211649]
+texture = ExtResource("10_ropa8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa8" unique_id=1632328135]
+shape = SubResource("RectangleShape2D_ropa8")

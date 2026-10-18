@@ -60,11 +60,10 @@ script = ExtResource("1_83pqt")
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_x06kb"), SubResource("Resource_hybkc")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it" unique_id=660277822]
-texture = ExtResource("2_cvvug")
+texture = ExtResource("2_postit1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it" unique_id=300147115]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_u0ya7")
+shape = SubResource("RectangleShape2D_postit1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it" unique_id=1091360851]
 
@@ -74,11 +73,10 @@ script = ExtResource("1_83pqt")
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_qcwpw"), SubResource("Resource_roqca")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it2" unique_id=310712322]
-texture = ExtResource("3_dfbdf")
+texture = ExtResource("3_postit2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it2" unique_id=1038674364]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_u0ya7")
+shape = SubResource("RectangleShape2D_postit2")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it2" unique_id=944166765]
 
