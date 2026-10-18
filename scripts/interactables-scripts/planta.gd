@@ -4,6 +4,8 @@ class_name Planta
 var textura_seca = preload("res://assets/art/interactables/placeholders/spr_planta_seca.png")
 var textura_feliz = preload("res://assets/art/interactables/placeholders/spr_planta_feliz.png")
 
+@onready var audio_agua: AudioStreamPlayer2D = get_node_or_null("AudioAgua")
+
 func al_iniciar() -> void:
 	if id.is_empty():
 		id = "planta"
@@ -22,6 +24,8 @@ func _on_input_event(viewport, event, shape_idx) -> void:
 
 func on_interaccion_exitosa() -> void:
 	sprite.texture = textura_feliz
+	if audio_agua:
+		audio_agua.play()
 
 ## Esta función va a llamar a la Botella 
 func regar() -> void:

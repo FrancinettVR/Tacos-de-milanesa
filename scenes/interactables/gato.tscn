@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0011.png" id="13_frame11"]
 [ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0012.png" id="14_frame12"]
 [ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0013.png" id="15_frame13"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/GATO_RONRONEO.wav" id="16_ronroneo"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/GATO_MAULLIDO.wav" id="17_maullido"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gato"]
 animations = [{
@@ -82,3 +84,9 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_gato")
+
+[node name="AudioRonroneo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_ronroneo")
+
+[node name="AudioMaullido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_maullido")
