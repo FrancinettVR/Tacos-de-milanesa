@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b3v4cg0mi4sq3"]
+
+[ext_resource type="Script" uid="uid://cdo45ct70duc7" path="res://scenes/interactables/post_it.gd" id="1_83pqt"]
+[ext_resource type="Texture2D" uid="uid://jvvmrun2r0wr" path="res://assets/art/interactables/placeholders/postit1.png" id="2_cvvug"]
+[ext_resource type="Texture2D" uid="uid://drnk7ny5evrrn" path="res://assets/art/interactables/placeholders/postit2.png" id="3_dfbdf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(59, 46)
+
+[node name="Postits" type="Node2D" unique_id=661812327]
+
+[node name="Post_it" type="Area2D" parent="." unique_id=194745685]
+position = Vector2(540, 540)
+script = ExtResource("1_83pqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Post_it" unique_id=660277822]
+texture = ExtResource("2_cvvug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it" unique_id=300147115]
+position = Vector2(-1.5, 1)
+shape = SubResource("RectangleShape2D_u0ya7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it" unique_id=1091360851]
+
+[node name="Post_it2" type="Area2D" parent="." unique_id=1918279918]
+position = Vector2(440, 540)
+script = ExtResource("1_83pqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Post_it2" unique_id=310712322]
+texture = ExtResource("3_dfbdf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it2" unique_id=1038674364]
+position = Vector2(-1.5, 1)
+shape = SubResource("RectangleShape2D_u0ya7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it2" unique_id=944166765]
