@@ -2,7 +2,7 @@ extends Interactable
 class_name Canasto
 
 ## Cantidad de prendas necesarias 
-@export var total_prendas: int = 3
+@export var total_prendas: int = 8
 var prendas_depositadas: int = 0
 
 ## feedback temporal

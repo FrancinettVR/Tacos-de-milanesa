@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://b3v4cg0mi4sq3"]
 
 [ext_resource type="Script" uid="uid://cdo45ct70duc7" path="res://scenes/interactables/post_it.gd" id="1_83pqt"]
-[ext_resource type="Texture2D" uid="uid://jvvmrun2r0wr" path="res://assets/art/interactables/placeholders/postit1.png" id="2_cvvug"]
-[ext_resource type="Texture2D" uid="uid://drnk7ny5evrrn" path="res://assets/art/interactables/placeholders/postit2.png" id="3_dfbdf"]
+[ext_resource type="Texture2D" uid="uid://cj277qknu8xkx" path="res://assets/art/Zona2/Postit1.png" id="2_postit1"]
+[ext_resource type="Texture2D" uid="uid://65dqs3mw24qu" path="res://assets/art/Zona2/Postit2.png" id="3_postit2"]
+[ext_resource type="Texture2D" uid="uid://8180npgi33k" path="res://assets/art/Zona2/Postit3.png" id="4_postit3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
-size = Vector2(59, 46)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_postit1"]
+size = Vector2(77, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_postit2"]
+size = Vector2(95, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_postit3"]
+size = Vector2(68, 61)
 
 [node name="Postits" type="Node2D" unique_id=661812327]
 
@@ -14,11 +21,10 @@ position = Vector2(510, 540)
 script = ExtResource("1_83pqt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it" unique_id=660277822]
-texture = ExtResource("2_cvvug")
+texture = ExtResource("2_postit1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it" unique_id=300147115]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_u0ya7")
+shape = SubResource("RectangleShape2D_postit1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it" unique_id=1091360851]
 
@@ -27,11 +33,10 @@ position = Vector2(440, 540)
 script = ExtResource("1_83pqt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it2" unique_id=310712322]
-texture = ExtResource("3_dfbdf")
+texture = ExtResource("3_postit2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it2" unique_id=1038674364]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_u0ya7")
+shape = SubResource("RectangleShape2D_postit2")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it2" unique_id=944166765]
 
@@ -40,49 +45,45 @@ position = Vector2(370, 540)
 script = ExtResource("1_83pqt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it3" unique_id=146548412]
-texture = ExtResource("3_dfbdf")
+texture = ExtResource("4_postit3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it3" unique_id=1924347398]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_u0ya7")
+shape = SubResource("RectangleShape2D_postit3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it3" unique_id=1655188753]
 
 [node name="Post_it4" type="Area2D" parent="." unique_id=2072123584]
-position = Vector2(510, 590)
+position = Vector2(510, 610)
 script = ExtResource("1_83pqt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it4" unique_id=1794412050]
-texture = ExtResource("2_cvvug")
+texture = ExtResource("2_postit1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it4" unique_id=2067048302]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_u0ya7")
+shape = SubResource("RectangleShape2D_postit1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it4" unique_id=218204293]
 
 [node name="Post_it5" type="Area2D" parent="." unique_id=1971612915]
-position = Vector2(440, 590)
+position = Vector2(440, 610)
 script = ExtResource("1_83pqt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it5" unique_id=2061834743]
-texture = ExtResource("3_dfbdf")
+texture = ExtResource("3_postit2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it5" unique_id=1904301692]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_u0ya7")
+shape = SubResource("RectangleShape2D_postit2")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it5" unique_id=110293781]
 
 [node name="Post_it6" type="Area2D" parent="." unique_id=909799757]
-position = Vector2(370, 590)
+position = Vector2(370, 610)
 script = ExtResource("1_83pqt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it6" unique_id=18197153]
-texture = ExtResource("2_cvvug")
+texture = ExtResource("4_postit3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post_it6" unique_id=1128198675]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_u0ya7")
+shape = SubResource("RectangleShape2D_postit3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Post_it6" unique_id=1964323888]

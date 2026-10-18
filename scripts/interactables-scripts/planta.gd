@@ -1,8 +1,8 @@
 extends Interactable
 class_name Planta
 
-var textura_seca = preload("res://assets/art/interactables/placeholders/spr_planta_seca.png")
-var textura_feliz = preload("res://assets/art/interactables/placeholders/spr_planta_feliz.png")
+var textura_seca = preload("res://assets/art/Zona2/Planta1.png")
+var textura_feliz = preload("res://assets/art/Zona2/Planta2.png")
 
 @onready var audio_agua: AudioStreamPlayer2D = get_node_or_null("AudioAgua")
 

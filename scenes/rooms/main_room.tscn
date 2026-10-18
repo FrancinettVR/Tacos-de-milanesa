@@ -4,9 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bukkpu717fis7" path="res://scenes/characters/protagonist.tscn" id="2_protagonist"]
 [ext_resource type="PackedScene" uid="uid://dlioi8unl6dd5" path="res://scenes/interactables/grupo_planta_botella.tscn" id="3_planta_botella"]
 [ext_resource type="PackedScene" uid="uid://b5lbil4w8oko3" path="res://scenes/interactables/grupo_cesto_basura.tscn" id="4_cesto_basura"]
-[ext_resource type="PackedScene" path="res://scenes/interactables/grupo_ropa_canasto.tscn" id="5_ropa_canasto"]
-[ext_resource type="PackedScene" path="res://scenes/interactables/gato.tscn" id="6_gato"]
-[ext_resource type="PackedScene" path="res://scenes/ui/sistema_estres.tscn" id="7_estres"]
+[ext_resource type="PackedScene" uid="uid://c6u7q4m2vw8xy" path="res://scenes/interactables/grupo_ropa_canasto.tscn" id="5_ropa_canasto"]
+[ext_resource type="PackedScene" uid="uid://dny3j0q7vxk8a" path="res://scenes/interactables/gato.tscn" id="6_gato"]
+[ext_resource type="PackedScene" uid="uid://b8dvy7uq3e4fa" path="res://scenes/ui/sistema_estres.tscn" id="7_estres"]
+[ext_resource type="Texture2D" uid="uid://dq5elmq7skago" path="res://assets/art/Zona1/Referencia.jpg" id="8_ref1"]
+[ext_resource type="Texture2D" uid="uid://rppdbd35f0ed" path="res://assets/art/Zona2/Referencia.jpg" id="9_ref2"]
+[ext_resource type="Texture2D" uid="uid://cp5bhdrk87ypu" path="res://assets/art/Zona3/Referencia.jpg" id="10_ref3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(5760, 1080)
@@ -29,6 +32,22 @@ offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
+[node name="ContenedorReferencias" type="Node2D" parent="Env" unique_id=1325680018]
+
+[node name="Zona1_Ref" type="Sprite2D" parent="Env/ContenedorReferencias" unique_id=1484219070]
+texture = ExtResource("8_ref1")
+centered = false
+
+[node name="Zona2_Ref" type="Sprite2D" parent="Env/ContenedorReferencias" unique_id=965517929]
+position = Vector2(1920, 0)
+texture = ExtResource("9_ref2")
+centered = false
+
+[node name="Zona3_Ref" type="Sprite2D" parent="Env/ContenedorReferencias" unique_id=1125111525]
+position = Vector2(3522, 0)
+texture = ExtResource("10_ref3")
+centered = false
+
 [node name="ClickArea" type="Area2D" parent="." unique_id=291796662]
 z_index = -1
 
@@ -36,19 +55,17 @@ z_index = -1
 position = Vector2(2880, 540)
 shape = SubResource("RectangleShape2D_m2g58")
 
-[node name="Protagonist" parent="." unique_id=724815251 instance=ExtResource("2_protagonist")]
-position = Vector2(1649, 675)
-
 [node name="GrupoPlantaBotella" parent="." unique_id=673338440 instance=ExtResource("3_planta_botella")]
-position = Vector2(1200, 326)
+position = Vector2(2110, 399)
 
 [node name="GrupoCestoBasura" parent="." unique_id=72386159 instance=ExtResource("4_cesto_basura")]
-position = Vector2(3200, 326)
 
-[node name="GrupoRopaCanasto" parent="." instance=ExtResource("5_ropa_canasto")]
-position = Vector2(4400, 960)
+[node name="GrupoRopaCanasto" parent="." unique_id=1675920471 instance=ExtResource("5_ropa_canasto")]
 
-[node name="Gato" parent="." instance=ExtResource("6_gato")]
-position = Vector2(2400, 832)
+[node name="Protagonist" parent="." unique_id=724815251 instance=ExtResource("2_protagonist")]
+position = Vector2(249, 711)
 
-[node name="SistemaEstres" parent="." instance=ExtResource("7_estres")]
+[node name="Gato" parent="." unique_id=1035416541 instance=ExtResource("6_gato")]
+position = Vector2(5229, 771)
+
+[node name="SistemaEstres" parent="." unique_id=803834899 instance=ExtResource("7_estres")]
