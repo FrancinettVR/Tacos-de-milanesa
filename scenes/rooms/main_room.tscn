@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b5lbil4w8oko3" path="res://scenes/interactables/grupo_cesto_basura.tscn" id="4_cesto_basura"]
 [ext_resource type="PackedScene" path="res://scenes/interactables/grupo_ropa_canasto.tscn" id="5_ropa_canasto"]
 [ext_resource type="PackedScene" path="res://scenes/interactables/gato.tscn" id="6_gato"]
+[ext_resource type="PackedScene" path="res://scenes/ui/sistema_estres.tscn" id="7_estres"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(5760, 1080)
@@ -49,3 +50,5 @@ position = Vector2(4400, 960)
 
 [node name="Gato" parent="." instance=ExtResource("6_gato")]
 position = Vector2(2400, 832)
+
+[node name="SistemaEstres" parent="." instance=ExtResource("7_estres")]
