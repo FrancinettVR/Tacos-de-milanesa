@@ -85,10 +85,10 @@ position = Vector2(2110, 399)
 
 [node name="GrupoRopaCanasto" parent="." unique_id=1675920471 instance=ExtResource("5_ropa_canasto")]
 
-[node name="Protagonist" parent="." unique_id=724815251 instance=ExtResource("2_protagonist")]
-position = Vector2(249, 711)
-
 [node name="Gato" parent="." unique_id=1035416541 instance=ExtResource("6_gato")]
 position = Vector2(992, 631)
+
+[node name="Protagonist" parent="." unique_id=724815251 instance=ExtResource("2_protagonist")]
+position = Vector2(249, 711)
 
 [node name="SistemaEstres" parent="." unique_id=803834899 instance=ExtResource("7_estres")]

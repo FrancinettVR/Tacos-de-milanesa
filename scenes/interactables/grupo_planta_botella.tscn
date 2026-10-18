@@ -49,7 +49,7 @@ shape = SubResource("RectangleShape2D_u0ya7")
 stream = ExtResource("4_agua")
 
 [node name="Botella" type="Area2D" parent="." unique_id=802681578 node_paths=PackedStringArray("planta")]
-position = Vector2(-10, 420)
+position = Vector2(-45, 333)
 script = ExtResource("3_aodf0")
 planta = NodePath("../Planta")
 
