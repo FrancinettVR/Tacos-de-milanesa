@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://drv3yrvcfs7xx"]
+
+[ext_resource type="Script" uid="uid://bkuo0urq12b4r" path="res://scenes/interactables/puerta.gd" id="1_vdxnk"]
+[ext_resource type="Texture2D" uid="uid://nal7rnxhie6s" path="res://assets/art/interactables/placeholders/spr_puerta_cerrada.png" id="2_f3mlw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(434, 758)
+
+[node name="Puerta" type="Node2D" unique_id=145473739]
+
+[node name="Puerta" type="Area2D" parent="." unique_id=494192779]
+position = Vector2(520, 520)
+script = ExtResource("1_vdxnk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Puerta" unique_id=327148105]
+texture = ExtResource("2_f3mlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta" unique_id=773467991]
+position = Vector2(35, -25)
+shape = SubResource("RectangleShape2D_u0ya7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Puerta" unique_id=219373232]

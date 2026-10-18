@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bk12utax1ym7q" path="res://assets/art/interactables/placeholders/spr_cesto_vacio.png" id="1_nx6ht"]
 [ext_resource type="Texture2D" uid="uid://bscwde6dgdu5y" path="res://assets/art/interactables/placeholders/spr_basura.png" id="2_mgi1p"]
 [ext_resource type="Script" uid="uid://cj04qd74aqg2j" path="res://scenes/interactables/basura.gd" id="3_td8i6"]
+[ext_resource type="Texture2D" uid="uid://xsdmy7of0b7g" path="res://assets/art/interactables/placeholders/taza_sucia.png" id="5_8jxqo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jxqo"]
 size = Vector2(216, 198)
@@ -24,7 +25,7 @@ texture = ExtResource("1_nx6ht")
 position = Vector2(5, 75)
 shape = SubResource("RectangleShape2D_8jxqo")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cesto"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cesto" unique_id=551176221]
 
 [node name="Basura" type="Area2D" parent="." unique_id=1759931558 node_paths=PackedStringArray("cesto")]
 position = Vector2(760, 540)
@@ -47,5 +48,29 @@ cesto = NodePath("../Cesto")
 texture = ExtResource("2_mgi1p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Basura2" unique_id=545344602]
+position = Vector2(1, 9)
+shape = SubResource("RectangleShape2D_td8i6")
+
+[node name="Taza1" type="Area2D" parent="." unique_id=160649153 node_paths=PackedStringArray("cesto")]
+position = Vector2(680, 540)
+script = ExtResource("3_td8i6")
+cesto = NodePath("../Cesto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taza1" unique_id=1492313658]
+texture = ExtResource("5_8jxqo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taza1" unique_id=107014855]
+position = Vector2(1, 9)
+shape = SubResource("RectangleShape2D_td8i6")
+
+[node name="Taza2" type="Area2D" parent="." unique_id=1050077622 node_paths=PackedStringArray("cesto")]
+position = Vector2(520, 540)
+script = ExtResource("3_td8i6")
+cesto = NodePath("../Cesto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Taza2" unique_id=1891085810]
+texture = ExtResource("5_8jxqo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Taza2" unique_id=1071344331]
 position = Vector2(1, 9)
 shape = SubResource("RectangleShape2D_td8i6")
