@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bukkpu717fis7" path="res://scenes/characters/protagonist.tscn" id="2_protagonist"]
 [ext_resource type="PackedScene" uid="uid://dlioi8unl6dd5" path="res://scenes/interactables/grupo_planta_botella.tscn" id="3_planta_botella"]
 [ext_resource type="PackedScene" uid="uid://b5lbil4w8oko3" path="res://scenes/interactables/grupo_cesto_basura.tscn" id="4_cesto_basura"]
+[ext_resource type="PackedScene" path="res://scenes/interactables/grupo_ropa_canasto.tscn" id="5_ropa_canasto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(5760, 1080)
@@ -41,3 +42,6 @@ position = Vector2(1200, 326)
 
 [node name="GrupoCestoBasura" parent="." unique_id=72386159 instance=ExtResource("4_cesto_basura")]
 position = Vector2(3200, 326)
+
+[node name="GrupoRopaCanasto" parent="." instance=ExtResource("5_ropa_canasto")]
+position = Vector2(4400, 960)
