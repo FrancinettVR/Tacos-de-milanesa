@@ -79,6 +79,7 @@ texture = ExtResource("4_basura1")
 shape = SubResource("RectangleShape2D_basura1")
 
 [node name="Basura2" type="Area2D" parent="." unique_id=1136137364 node_paths=PackedStringArray("cesto")]
+visible = false
 position = Vector2(576, 894)
 script = ExtResource("3_td8i6")
 cesto = NodePath("../Cesto")
@@ -123,6 +124,7 @@ texture = ExtResource("8_basura5")
 shape = SubResource("RectangleShape2D_basura5")
 
 [node name="Taza1" type="Area2D" parent="." unique_id=160649153 node_paths=PackedStringArray("cesto")]
+visible = false
 position = Vector2(1500, 96)
 script = ExtResource("3_td8i6")
 cesto = NodePath("../Cesto")
@@ -135,6 +137,7 @@ position = Vector2(1, 9)
 shape = SubResource("RectangleShape2D_td8i6")
 
 [node name="Taza2" type="Area2D" parent="." unique_id=1050077622 node_paths=PackedStringArray("cesto")]
+visible = false
 position = Vector2(1647, 110)
 script = ExtResource("3_td8i6")
 cesto = NodePath("../Cesto")

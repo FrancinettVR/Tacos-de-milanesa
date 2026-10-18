@@ -75,7 +75,7 @@ render_target_update_mode = 4
 z_index = -1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=149278725]
-position = Vector2(2880, 540)
+position = Vector2(2897, 567)
 shape = SubResource("RectangleShape2D_m2g58")
 
 [node name="GrupoPlantaBotella" parent="." unique_id=673338440 instance=ExtResource("3_planta_botella")]
@@ -89,6 +89,6 @@ position = Vector2(2110, 399)
 position = Vector2(249, 711)
 
 [node name="Gato" parent="." unique_id=1035416541 instance=ExtResource("6_gato")]
-position = Vector2(5229, 771)
+position = Vector2(992, 631)
 
 [node name="SistemaEstres" parent="." unique_id=803834899 instance=ExtResource("7_estres")]

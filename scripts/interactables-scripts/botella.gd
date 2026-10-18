@@ -4,8 +4,7 @@ class_name Botella
 ## Referencia a la planta que debe ser regada
 @export var planta: Node
 
-var textura_llena = preload("res://assets/art/interactables/placeholders/spr_botella_llena.png")
-var textura_vacia = preload("res://assets/art/interactables/placeholders/spr_botella_vacia.png")
+var textura_llena = preload("res://assets/art/Zona2/Botella.png")
 
 func al_iniciar() -> void:
 	if id.is_empty():
@@ -21,6 +20,6 @@ func objetivo_valido() -> bool:
 	return false
 
 func on_interaccion_exitosa() -> void:
-	sprite.texture = textura_vacia
+	# No hay arte para botella vacía, por lo que mantiene su estado lleno
 	if planta and planta.has_method("regar"):
 		planta.regar()
