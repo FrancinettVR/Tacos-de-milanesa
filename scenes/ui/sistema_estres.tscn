@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://b8dvy7uq3e4fa"]
+
+[ext_resource type="Script" path="res://scenes/ui/sistema_estres.gd" id="1_script"]
+[ext_resource type="Shader" path="res://shaders/vision_tunel.gdshader" id="2_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_estres"]
+shader = ExtResource("2_shader")
+shader_parameter/color_efecto = Color(0, 0, 0, 1)
+shader_parameter/intensidad_efecto = 0.0
+shader_parameter/oscurecimiento_maximo = 0.4
+shader_parameter/radio_tunel_max = 0.9
+shader_parameter/radio_tunel_min = 0.2
+shader_parameter/suavidad_borde = 0.4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.08, 0.08, 0.1, 0.85)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[node name="SistemaEstres" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_script")
+
+[node name="EfectoVisual" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_estres")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelDebug" type="PanelContainer" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 414.0
+offset_bottom = 224.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelDebug"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelDebug/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Titulo" type="Label" parent="PanelDebug/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "🧪 CONTROL DE ESTRÉS (F1 para ocultar)"
+
+[node name="FilaEstres" type="HBoxContainer" parent="PanelDebug/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="PanelDebug/MarginContainer/VBoxContainer/FilaEstres"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+text = "Estrés:"
+
+[node name="SliderEstres" type="HSlider" parent="PanelDebug/MarginContainer/VBoxContainer/FilaEstres"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="LabelEstresVal" type="Label" parent="PanelDebug/MarginContainer/VBoxContainer/FilaEstres"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "0%"
+horizontal_alignment = 2
+
+[node name="FilaUmbral" type="HBoxContainer" parent="PanelDebug/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="PanelDebug/MarginContainer/VBoxContainer/FilaUmbral"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+text = "Umbral:"
+
+[node name="SliderUmbral" type="HSlider" parent="PanelDebug/MarginContainer/VBoxContainer/FilaUmbral"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 20.0
+
+[node name="LabelUmbralVal" type="Label" parent="PanelDebug/MarginContainer/VBoxContainer/FilaUmbral"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "20%"
+horizontal_alignment = 2
+
+[node name="FilaOscurecimiento" type="HBoxContainer" parent="PanelDebug/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="PanelDebug/MarginContainer/VBoxContainer/FilaOscurecimiento"]
+custom_minimum_size = Vector2(85, 0)
+layout_mode = 2
+text = "Osc. Máx:"
+
+[node name="SliderOscurecimiento" type="HSlider" parent="PanelDebug/MarginContainer/VBoxContainer/FilaOscurecimiento"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+value = 40.0
+
+[node name="LabelOscurecimientoVal" type="Label" parent="PanelDebug/MarginContainer/VBoxContainer/FilaOscurecimiento"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "40%"
+horizontal_alignment = 2
+
+[node name="LabelEstadoEfecto" type="Label" parent="PanelDebug/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Efecto: Inactivo"
