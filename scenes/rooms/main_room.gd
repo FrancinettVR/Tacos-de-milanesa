@@ -32,6 +32,3 @@ func _sincronizar_fondo_3d() -> void:
 	# Sincronización lineal exacta 1:1: 1 metro en 3D = 1000 píxeles en 2D (cero deslizamiento)
 	var cam3d_x: float = (cam2d_x - 2880.0) / 1000.0
 	habitacion_3d.sincronizar_camara_x(cam3d_x)
-
-
-
