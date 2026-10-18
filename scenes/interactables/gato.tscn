@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dny3j0q7vxk8a"]
+
+[ext_resource type="Script" path="res://scenes/interactables/gato.gd" id="1_gato"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0000.png" id="2_frame0"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0001.png" id="3_frame1"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0002.png" id="4_frame2"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0003.png" id="5_frame3"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0004.png" id="6_frame4"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0005.png" id="7_frame5"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0006.png" id="8_frame6"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0007.png" id="9_frame7"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0008.png" id="10_frame8"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0009.png" id="11_frame9"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0010.png" id="12_frame10"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0011.png" id="13_frame11"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0012.png" id="14_frame12"]
+[ext_resource type="Texture2D" path="res://assets/art/characters/cat/Gatito_0013.png" id="15_frame13"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gato"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_frame0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_frame1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_frame2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_frame3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_frame4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_frame5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_frame6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_frame7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_frame8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_frame9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_frame10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_frame11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_frame12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_frame13")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gato"]
+size = Vector2(160, 380)
+
+[node name="Gato" type="Area2D"]
+script = ExtResource("1_gato")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gato")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_gato")
