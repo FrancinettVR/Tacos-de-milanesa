@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dq5elmq7skago" path="res://assets/art/Zona1/Referencia.jpg" id="8_ref1"]
 [ext_resource type="Texture2D" uid="uid://rppdbd35f0ed" path="res://assets/art/Zona2/Referencia.jpg" id="9_ref2"]
 [ext_resource type="Texture2D" uid="uid://cp5bhdrk87ypu" path="res://assets/art/Zona3/Referencia.jpg" id="10_ref3"]
+[ext_resource type="PackedScene" uid="uid://cxvd8524671ma" path="res://scenes/environment/habitacion_3d.tscn" id="11_habitacion_3d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(5760, 1080)
@@ -20,12 +21,14 @@ script = ExtResource("1_5t81v")
 [node name="Env" type="Node2D" parent="." unique_id=1265365445]
 
 [node name="Background" type="ColorRect" parent="Env" unique_id=98105340]
+visible = false
 offset_right = 5760.0
 offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0.6814234, 0.6814234, 0.6814234, 1)
 
 [node name="Floor" type="ColorRect" parent="Env" unique_id=1909697501]
+visible = false
 offset_top = 1040.0
 offset_right = 5760.0
 offset_bottom = 1080.0
@@ -33,6 +36,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="ContenedorReferencias" type="Node2D" parent="Env" unique_id=1325680018]
+visible = false
 
 [node name="Zona1_Ref" type="Sprite2D" parent="Env/ContenedorReferencias" unique_id=1484219070]
 texture = ExtResource("8_ref1")
@@ -47,6 +51,25 @@ centered = false
 position = Vector2(3522, 0)
 texture = ExtResource("10_ref3")
 centered = false
+
+[node name="Fondo3DLayer" type="CanvasLayer" parent="Env" unique_id=384942751]
+layer = -100
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Env/Fondo3DLayer" unique_id=170193661]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Env/Fondo3DLayer/SubViewportContainer" unique_id=828080997]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Habitacion3D" parent="Env/Fondo3DLayer/SubViewportContainer/SubViewport" unique_id=1902487596 instance=ExtResource("11_habitacion_3d")]
 
 [node name="ClickArea" type="Area2D" parent="." unique_id=291796662]
 z_index = -1
