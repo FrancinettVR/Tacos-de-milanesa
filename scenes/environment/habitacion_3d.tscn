@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://txua52448jv5" path="res://assets/art/Arte 3D/fbx_blender/mueble/mueble.fbx" id="5_mueble"]
 [ext_resource type="PackedScene" uid="uid://c70j7y6i6yjc" path="res://assets/art/Arte 3D/fbx_blender/maceta/maceta.fbx" id="6_maceta"]
 [ext_resource type="PackedScene" uid="uid://bobryh8b1jxnp" path="res://assets/art/Arte 3D/fbx_blender/sillon/sillon.fbx" id="7_sillon"]
+[ext_resource type="PackedScene" uid="uid://crf4nhv0lits7" path="res://assets/art/Arte 3D/fbx_blender/pc/pc.fbx" id="8_pc"]
 
 [sub_resource type="Environment" id="Environment_3d"]
 background_mode = 1
@@ -35,6 +36,9 @@ transform = Transform3D(2.167, 0, 0, 0, 2.167, 0, 0, 0, 2.167, -0.834, 0, 0)
 
 [node name="Cama" parent="." instance=ExtResource("4_cama")]
 transform = Transform3D(2.167, 0, 0, 0, 2.167, 0, 0, 0, 2.167, -1.784, 0, 0)
+
+[node name="PC" parent="." instance=ExtResource("8_pc")]
+transform = Transform3D(2.167, 0, 0, 0, 2.167, 0, 0, 0, 2.167, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 2, 2)

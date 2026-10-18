@@ -144,6 +144,20 @@ func _configurar_materiales() -> void:
 	mat_mueble.roughness = 0.6
 	_asignar_material("Mueble", mat_mueble)
 	_materiales.append(mat_mueble)
+	
+	# 7. PC
+	var mat_pc := StandardMaterial3D.new()
+	mat_pc.resource_name = "Mat_PC"
+	var pc_tex_path := "res://assets/art/Arte 3D/texturas_substance/pc/pc_DefaultMaterial_BaseColor.png"
+	if ResourceLoader.exists(pc_tex_path):
+		mat_pc.albedo_texture = load(pc_tex_path)
+		var pc_norm_path := "res://assets/art/Arte 3D/texturas_substance/pc/pc_DefaultMaterial_Normal.png"
+		if ResourceLoader.exists(pc_norm_path):
+			mat_pc.normal_enabled = true
+			mat_pc.normal_texture = load(pc_norm_path)
+	mat_pc.roughness = 0.5
+	_asignar_material("PC", mat_pc)
+	_materiales.append(mat_pc)
 
 func _asignar_material(node_name: String, mat: StandardMaterial3D) -> void:
 	var n: Node = find_child(node_name, true, false)
