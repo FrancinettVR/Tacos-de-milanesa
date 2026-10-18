@@ -1,5 +1,5 @@
 # scripts/interactables-scripts/post_it.gd
-extends ClickInteractable
+extends DialogInteractable
 class_name PostIt
 
 @onready var audio_borrar: AudioStreamPlayer2D = get_node_or_null("AudioBorrar")

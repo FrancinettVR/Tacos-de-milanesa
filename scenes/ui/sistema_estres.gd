@@ -58,6 +58,8 @@ var tween_transicion: Tween = null
 var efecto_activo: bool = false
 
 func _ready() -> void:
+	add_to_group("sistema_estres")
+	
 	# Inicializar valores de controles de debug
 	if slider_estres:
 		slider_estres.value = nivel_estres * 100.0
