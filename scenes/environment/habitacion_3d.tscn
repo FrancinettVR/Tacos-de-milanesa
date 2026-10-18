@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cxvd8524671ma"]
+
+[ext_resource type="Script" path="res://scenes/environment/habitacion_3d.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://ogl730khn2oo" path="res://assets/art/Arte 3D/fbx_blender/pared/pared.fbx" id="2_pared"]
+[ext_resource type="PackedScene" uid="uid://d2hkvorc3cioo" path="res://assets/art/Arte 3D/fbx_blender/piso/piso_suelo.fbx" id="3_piso"]
+[ext_resource type="PackedScene" uid="uid://fp77h6v7d5g1" path="res://assets/art/Arte 3D/fbx_blender/cama/cama.fbx" id="4_cama"]
+[ext_resource type="PackedScene" uid="uid://txua52448jv5" path="res://assets/art/Arte 3D/fbx_blender/mueble/mueble.fbx" id="5_mueble"]
+[ext_resource type="PackedScene" uid="uid://c70j7y6i6yjc" path="res://assets/art/Arte 3D/fbx_blender/maceta/maceta.fbx" id="6_maceta"]
+[ext_resource type="PackedScene" uid="uid://bobryh8b1jxnp" path="res://assets/art/Arte 3D/fbx_blender/sillon/sillon.fbx" id="7_sillon"]
+[ext_resource type="PackedScene" uid="uid://crf4nhv0lits7" path="res://assets/art/Arte 3D/fbx_blender/pc/pc.fbx" id="8_pc"]
+
+[sub_resource type="Environment" id="Environment_3d"]
+background_mode = 1
+background_color = Color(0.12, 0.12, 0.14, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7, 0.7, 0.75, 1)
+ambient_light_energy = 0.8
+
+[node name="Habitacion3D" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="Piso" parent="." instance=ExtResource("3_piso")]
+transform = Transform3D(1, 0, 0, 0, 2.167, 0, 0, 0, 2.167, 0, 0, 0)
+
+[node name="Pared" parent="." instance=ExtResource("2_pared")]
+transform = Transform3D(1, 0, 0, 0, 2.167, 0, 0, 0, 2.167, 0, 0, 0)
+
+[node name="Sillon" parent="." instance=ExtResource("7_sillon")]
+transform = Transform3D(2.167, 0, 0, 0, 2.167, 0, 0, 0, 2.167, 1.434, 0, 0)
+
+[node name="Maceta" parent="." instance=ExtResource("6_maceta")]
+transform = Transform3D(2.167, 0, 0, 0, 2.167, 0, 0, 0, 2.167, 2.841, 0, 0)
+
+[node name="Mueble" parent="." instance=ExtResource("5_mueble")]
+transform = Transform3D(2.167, 0, 0, 0, 2.167, 0, 0, 0, 2.167, -0.834, 0, 0)
+
+[node name="Cama" parent="." instance=ExtResource("4_cama")]
+transform = Transform3D(2.167, 0, 0, 0, 2.167, 0, 0, 0, 2.167, -1.784, 0, 0)
+
+[node name="PC" parent="." instance=ExtResource("8_pc")]
+transform = Transform3D(2.167, 0, 0, 0, 2.167, 0, 0, 0, 2.167, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 2, 2)
+light_color = Color(1, 0.980392, 0.941176, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3d")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92, 0.54, 2.5)
+projection = 1
+current = true
+size = 1.08

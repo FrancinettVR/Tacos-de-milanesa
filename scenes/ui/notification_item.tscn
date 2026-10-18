@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bqjwb7hbhhv4t"]
+
+[ext_resource type="Texture2D" uid="uid://dmugnwwg0ro0p" path="res://assets/art/interactables/placeholders/notif1.png" id="2_xl0l0"]
+[ext_resource type="Script" uid="uid://bpg2n0vupch5c" path="res://scripts/interactables-scripts/notification_item.gd" id="2_xxltq"]
+
+[node name="NotificationItem" type="TextureButton" unique_id=493990084]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_xl0l0")
+script = ExtResource("2_xxltq")
