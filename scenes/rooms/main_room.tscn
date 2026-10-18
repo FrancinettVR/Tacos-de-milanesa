@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://dct7xj0iouk7j"]
 
+[ext_resource type="Script" uid="uid://cvhtfnoya2xa7" path="res://scenes/rooms/main_room.gd" id="1_5t81v"]
+[ext_resource type="PackedScene" uid="uid://bukkpu717fis7" path="res://scenes/characters/protagonist.tscn" id="2_protagonist"]
+[ext_resource type="PackedScene" uid="uid://dlioi8unl6dd5" path="res://scenes/interactables/grupo_planta_botella.tscn" id="3_planta_botella"]
+[ext_resource type="PackedScene" uid="uid://b5lbil4w8oko3" path="res://scenes/interactables/grupo_cesto_basura.tscn" id="4_cesto_basura"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(5760, 1080)
 
 [node name="MainRoom" type="Node2D" unique_id=394292029]
+script = ExtResource("1_5t81v")
 
 [node name="Env" type="Node2D" parent="." unique_id=1265365445]
 
@@ -21,8 +27,17 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="ClickArea" type="Area2D" parent="." unique_id=291796662]
-visible = false
+z_index = -1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=149278725]
 position = Vector2(2880, 540)
 shape = SubResource("RectangleShape2D_m2g58")
+
+[node name="Protagonist" parent="." unique_id=724815251 instance=ExtResource("2_protagonist")]
+position = Vector2(1649, 715)
+
+[node name="GrupoPlantaBotella" parent="." unique_id=673338440 instance=ExtResource("3_planta_botella")]
+position = Vector2(1200, 326)
+
+[node name="GrupoCestoBasura" parent="." unique_id=72386159 instance=ExtResource("4_cesto_basura")]
+position = Vector2(3200, 326)
