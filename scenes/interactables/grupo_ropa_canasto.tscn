@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://c6u7q4m2vw8xy"]
+
+[ext_resource type="Script" path="res://scenes/interactables/canasto.gd" id="1_canasto"]
+[ext_resource type="Script" path="res://scenes/interactables/ropa.gd" id="2_ropa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_canasto"]
+size = Vector2(200, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa"]
+size = Vector2(90, 80)
+
+[node name="GrupoRopaCanasto" type="Node2D"]
+
+[node name="Canasto" type="Area2D" parent="."]
+position = Vector2(600, 0)
+script = ExtResource("1_canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Canasto"]
+
+[node name="ColorRect" type="ColorRect" parent="Canasto"]
+offset_left = -100.0
+offset_top = -80.0
+offset_right = 100.0
+offset_bottom = 80.0
+mouse_filter = 2
+color = Color(0.62, 0.44, 0.28, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canasto"]
+shape = SubResource("RectangleShape2D_canasto")
+
+[node name="Ropa1" type="Area2D" parent="." node_paths=PackedStringArray("canasto")]
+position = Vector2(0, 40)
+script = ExtResource("2_ropa")
+canasto = NodePath("../Canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ropa1"]
+
+[node name="ColorRect" type="ColorRect" parent="Ropa1"]
+offset_left = -45.0
+offset_top = -40.0
+offset_right = 45.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.24, 0.48, 0.85, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa1"]
+shape = SubResource("RectangleShape2D_ropa")
+
+[node name="Ropa2" type="Area2D" parent="." node_paths=PackedStringArray("canasto")]
+position = Vector2(160, 40)
+script = ExtResource("2_ropa")
+canasto = NodePath("../Canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ropa2"]
+
+[node name="ColorRect" type="ColorRect" parent="Ropa2"]
+offset_left = -45.0
+offset_top = -40.0
+offset_right = 45.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.85, 0.32, 0.32, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa2"]
+shape = SubResource("RectangleShape2D_ropa")
+
+[node name="Ropa3" type="Area2D" parent="." node_paths=PackedStringArray("canasto")]
+position = Vector2(320, 40)
+script = ExtResource("2_ropa")
+canasto = NodePath("../Canasto")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ropa3"]
+
+[node name="ColorRect" type="ColorRect" parent="Ropa3"]
+offset_left = -45.0
+offset_top = -40.0
+offset_right = 45.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.3, 0.75, 0.45, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropa3"]
+shape = SubResource("RectangleShape2D_ropa")

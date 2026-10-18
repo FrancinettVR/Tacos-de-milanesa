@@ -14,6 +14,8 @@ func _on_input_event(viewport, event, shape_idx) -> void:
 	if usada or arrastrando:
 		return
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		# Evitar que iniciar el arrastre mueva a la protagonista
+		viewport.set_input_as_handled()
 		arrastrando = true
 		offset_click = global_position - get_global_mouse_position()
 

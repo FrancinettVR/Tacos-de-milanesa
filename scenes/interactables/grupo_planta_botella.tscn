@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cs6bysnrxrkqg" path="res://assets/art/interactables/placeholders/spr_planta_seca.png" id="2_neny4"]
 [ext_resource type="Script" uid="uid://t4i2jk3vu6i4" path="res://scripts/interactables-scripts/botella.gd" id="3_aodf0"]
 [ext_resource type="Texture2D" uid="uid://dwed7llket15j" path="res://assets/art/interactables/placeholders/spr_botella_llena.png" id="3_m7ymp"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/AGUA.wav" id="4_agua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
 size = Vector2(254, 307)
@@ -23,6 +24,9 @@ texture = ExtResource("2_neny4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planta" unique_id=695305312]
 position = Vector2(-2, 20.5)
 shape = SubResource("RectangleShape2D_u0ya7")
+
+[node name="AudioAgua" type="AudioStreamPlayer2D" parent="Planta"]
+stream = ExtResource("4_agua")
 
 [node name="Botella" type="Area2D" parent="." unique_id=802681578 node_paths=PackedStringArray("planta")]
 position = Vector2(1160, 540)
