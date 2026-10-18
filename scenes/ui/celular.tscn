@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dnr841fi7228v"]
+
+[ext_resource type="Script" uid="uid://ddt6pmgv1cf8" path="res://scripts/interactables-scripts/celular.gd" id="1_4xqkg"]
+[ext_resource type="PackedScene" uid="uid://wbhousru5amc" path="res://scenes/ui/panel_notificaciones.tscn" id="1_ttg56"]
+[ext_resource type="Texture2D" uid="uid://ccci15hdd20k1" path="res://assets/art/interactables/Celular_Prendido.png" id="2_16d4r"]
+
+[node name="Celular" type="CanvasLayer" unique_id=938096015]
+offset = Vector2(540, 540)
+transform = Transform2D(1, 0, 0, 1, 540, 540)
+script = ExtResource("1_4xqkg")
+
+[node name="Control" type="Control" parent="." unique_id=1528880442]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FondoCelular" type="TextureRect" parent="Control" unique_id=718193071]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_16d4r")
+
+[node name="PanelNotificaciones" parent="Control" unique_id=1807699952 instance=ExtResource("1_ttg56")]
+layout_mode = 0
+
+[node name="Timer" type="Timer" parent="." unique_id=299010580]
+
+[node name="AudioVibracion" type="AudioStreamPlayer" parent="." unique_id=83383956]
