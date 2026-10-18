@@ -36,7 +36,7 @@ position = Vector2(2880, 540)
 shape = SubResource("RectangleShape2D_m2g58")
 
 [node name="Protagonist" parent="." unique_id=724815251 instance=ExtResource("2_protagonist")]
-position = Vector2(1649, 715)
+position = Vector2(1649, 675)
 
 [node name="GrupoPlantaBotella" parent="." unique_id=673338440 instance=ExtResource("3_planta_botella")]
 position = Vector2(1200, 326)
