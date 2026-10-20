@@ -155,7 +155,14 @@ func _configurar_materiales() -> void:
 		if ResourceLoader.exists(pc_norm_path):
 			mat_pc.normal_enabled = true
 			mat_pc.normal_texture = load(pc_norm_path)
-	mat_pc.roughness = 0.5
+			mat_pc.normal_scale = 1.0
+	mat_pc.vertex_color_use_as_albedo = false
+	mat_pc.metallic = 0.25
+	mat_pc.roughness = 0.4
+	# color de la pantalla de la pc corregido
+	mat_pc.emission_enabled = true
+	mat_pc.emission = Color(0.12, 0.15, 0.20)
+	mat_pc.emission_energy_multiplier = 0.4
 	_asignar_material("PC", mat_pc)
 	_materiales.append(mat_pc)
 

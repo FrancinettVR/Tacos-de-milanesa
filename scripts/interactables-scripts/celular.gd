@@ -28,7 +28,8 @@ func _on_timer_timeout() -> void:
 
 func mostrar() -> void:
 	visible = true
-	audio_vibracion.play()
+	if audio_vibracion and audio_vibracion.stream:
+		audio_vibracion.play()
 	panel.poblar()
 
 func ocultar_y_reaparecer() -> void:

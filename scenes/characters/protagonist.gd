@@ -27,6 +27,7 @@ var is_moving: bool = false
 ## Función de ejecución inicial y única
 ## Guarda la pos inicial del personaje y fija el eje Y
 func _ready() -> void:
+	add_to_group("protagonista")
 	fixed_y = position.y
 	target_x = position.x
 	# Estado inicial en reposo mirando a la derecha
@@ -83,3 +84,13 @@ func walk_to(destination_x: float) -> void:
 	# Evitamos que camine fuera de los límites de la habitación (con margen de 60 px)
 	target_x = clamp(destination_x, 60.0, 5700.0)
 	is_moving = true
+
+## Evita que camine si se abre el dialogo
+func stop() -> void:
+	is_moving = false
+	velocity.x = 0.0
+	if animated_sprite:
+		if mirando_derecha:
+			animated_sprite.play("reposo_derecha")
+		else:
+			animated_sprite.play("reposo_izquierda")

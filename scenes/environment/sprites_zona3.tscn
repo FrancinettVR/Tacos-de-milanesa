@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bq7pughb4o13j"]
+
+[ext_resource type="Texture2D" uid="uid://cp5bhdrk87ypu" path="res://assets/art/Zona3/Referencia.jpg" id="1_ref3"]
+[ext_resource type="Texture2D" uid="uid://eqmfepe2na51" path="res://assets/art/Zona3/Armario.png" id="2_armario"]
+[ext_resource type="Texture2D" uid="uid://yf14sfwqqkar" path="res://assets/art/Zona3/Cartel1.png" id="3_cartel1"]
+[ext_resource type="Texture2D" uid="uid://gaaw1114sfuu" path="res://assets/art/Zona3/Cartel2.png" id="4_cartel2"]
+[ext_resource type="Texture2D" uid="uid://driek0qrx2n2w" path="res://assets/art/Zona3/CortinaCerrada.png" id="5_cortina"]
+[ext_resource type="Texture2D" uid="uid://bdhtpg040k2hd" path="res://assets/art/Zona3/Lámpara.png" id="6_lampara"]
+
+[node name="zona 3" type="Node2D" unique_id=754132055]
+
+[node name="ContenedorReferencias" type="Node2D" parent="." unique_id=1726897310]
+visible = false
+
+[node name="Zona3_Ref" type="Sprite2D" parent="ContenedorReferencias" unique_id=1691555104]
+texture = ExtResource("1_ref3")
+centered = false
+
+[node name="Armario" type="Sprite2D" parent="." unique_id=81546884]
+position = Vector2(366, 626)
+texture = ExtResource("2_armario")
+
+[node name="CortinaCerrada" type="Sprite2D" parent="." unique_id=578493493]
+position = Vector2(1383, 470)
+texture = ExtResource("5_cortina")
+
+[node name="Lampara" type="Sprite2D" parent="." unique_id=452296614]
+position = Vector2(2083, 842)
+texture = ExtResource("6_lampara")
+
+[node name="Cartel1" type="Sprite2D" parent="." unique_id=1000790478]
+position = Vector2(1791, 545.5)
+texture = ExtResource("3_cartel1")
+
+[node name="Cartel2" type="Sprite2D" parent="." unique_id=744721897]
+position = Vector2(1950, 408)
+texture = ExtResource("4_cartel2")

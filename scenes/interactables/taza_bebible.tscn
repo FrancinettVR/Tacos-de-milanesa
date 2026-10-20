@@ -1,22 +1,20 @@
 [gd_scene format=3 uid="uid://bvymkswc8e0au"]
 
-[ext_resource type="Texture2D" uid="uid://cqpqp3kdi4vek" path="res://assets/art/interactables/placeholders/taza_bebible.png" id="1_1o5ar"]
+[ext_resource type="Texture2D" uid="uid://b8i2uqjcjf74i" path="res://assets/art/Zona2/Café.png" id="1_1o5ar"]
 [ext_resource type="Script" uid="uid://cpmrtp7q52wec" path="res://scripts/interactables-scripts/taza_bebible.gd" id="1_icwll"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
-size = Vector2(53, 45)
+size = Vector2(60, 70)
 
 [node name="TazaBebible" type="Node2D" unique_id=1470160608]
 
 [node name="TazaBebible" type="Area2D" parent="." unique_id=1087689211]
-position = Vector2(680, 540)
 script = ExtResource("1_icwll")
 
 [node name="Sprite2D" type="Sprite2D" parent="TazaBebible" unique_id=1063116123]
 texture = ExtResource("1_1o5ar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TazaBebible" unique_id=446344072]
-position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_u0ya7")
 
 [node name="AudioSorbo" type="AudioStreamPlayer2D" parent="TazaBebible" unique_id=538290550]

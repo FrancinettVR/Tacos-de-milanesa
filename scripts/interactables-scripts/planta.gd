@@ -9,7 +9,7 @@ var textura_feliz = preload("res://assets/art/Zona2/Planta2.png")
 func al_iniciar() -> void:
 	if id.is_empty():
 		id = "planta"
-	sprite.texture = textura_seca
+	sprite.texture = textura_feliz if usada else textura_seca
 
 func _ready() -> void:
 	super._ready()
