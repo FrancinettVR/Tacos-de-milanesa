@@ -3,31 +3,95 @@
 [ext_resource type="Script" uid="uid://ddt6pmgv1cf8" path="res://scripts/interactables-scripts/celular.gd" id="1_4xqkg"]
 [ext_resource type="PackedScene" uid="uid://wbhousru5amc" path="res://scenes/ui/panel_notificaciones.tscn" id="1_ttg56"]
 [ext_resource type="Texture2D" uid="uid://ccci15hdd20k1" path="res://assets/art/interactables/Celular_Prendido.png" id="2_16d4r"]
+[ext_resource type="AudioStream" uid="uid://cbywlm4lg4ocu" path="res://assets/audio/audio/OBJETOS/CELULAR/CELULAR_VIBRACION.wav" id="3_vibracion"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apagar_norm"]
+bg_color = Color(0.85098, 0.219608, 0.219608, 0.941176)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.6, 0.6, 0.705882)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.25)
+shadow_size = 3
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apagar_hov"]
+bg_color = Color(0.960784, 0.282353, 0.282353, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.85098, 0.85098, 0.941176)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.35)
+shadow_size = 5
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apagar_press"]
+bg_color = Color(0.68, 0.15, 0.15, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_apagar_focus"]
 
 [node name="Celular" type="CanvasLayer" unique_id=938096015]
-offset = Vector2(1360, 200)
-transform = Transform2D(1, 0, 0, 1, 1360, 200)
+layer = 15
+offset = Vector2(1360, 1100)
+transform = Transform2D(1, 0, 0, 1, 1360, 1100)
 script = ExtResource("1_4xqkg")
 
 [node name="Control" type="Control" parent="." unique_id=1528880442]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 500.0
+offset_bottom = 800.0
+pivot_offset = Vector2(250, 400)
 
 [node name="FondoCelular" type="TextureRect" parent="Control" unique_id=718193071]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 500.0
+offset_bottom = 800.0
 texture = ExtResource("2_16d4r")
 
 [node name="PanelNotificaciones" parent="Control" unique_id=1807699952 instance=ExtResource("1_ttg56")]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 220.0
-offset_right = 440.0
-offset_bottom = 350.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 75.0
+offset_top = 160.0
+offset_right = 425.0
+offset_bottom = 680.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="BotonApagar" type="Button" parent="Control" unique_id=741852963]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 108.0
+offset_right = 414.0
+offset_bottom = 144.0
+tooltip_text = "Apagar teléfono"
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 18
+theme_override_styles/focus = SubResource("StyleBoxEmpty_apagar_focus")
+theme_override_styles/hover = SubResource("StyleBoxFlat_apagar_hov")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_apagar_press")
+theme_override_styles/normal = SubResource("StyleBoxFlat_apagar_norm")
+text = "⏻"
 
 [node name="Timer" type="Timer" parent="." unique_id=299010580]
+one_shot = true
 
 [node name="AudioVibracion" type="AudioStreamPlayer" parent="." unique_id=83383956]
+stream = ExtResource("3_vibracion")

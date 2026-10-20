@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgnauhgm1hbrp"
+path="res://.godot/imported/efecto ensordecedor.wav-062dc613e96fd1ada3a3311f47aec0b5.sample"
+
+[deps]
+
+source_file="res://assets/audio/audio/AMBIENTE/INTERIOR/efecto ensordecedor.wav"
+dest_files=["res://.godot/imported/efecto ensordecedor.wav-062dc613e96fd1ada3a3311f47aec0b5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

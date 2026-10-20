@@ -6,3 +6,6 @@ docs/
 [Bb]uild/
 *.exe
 *.pck
+
+# Archivos de audio pesados (>100MB)
+assets/audio/audio/MUSICA/PISTA_FONDO.wav*
