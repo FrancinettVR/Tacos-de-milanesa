@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://rppdbd35f0ed" path="res://assets/art/Zona2/Referencia.jpg" id="1_ref2"]
+[ext_resource type="Texture2D" uid="uid://b1vl0btprbme6" path="res://assets/art/Zona2/Luz.png" id="2_luz"]
+[ext_resource type="Texture2D" uid="uid://c8ejuylndehm1" path="res://assets/art/Zona2/Cajón.png" id="3_cajon"]
+
+[node name="zona 2" type="Node2D"]
+
+[node name="ContenedorReferencias" type="Node2D" parent="."]
+visible = false
+
+[node name="Zona2_Ref" type="Sprite2D" parent="ContenedorReferencias"]
+texture = ExtResource("1_ref2")
+centered = false
+
+[node name="Luz" type="Sprite2D" parent="."]
+position = Vector2(736.5, 120)
+texture = ExtResource("2_luz")
+
+[node name="Cajon" type="Sprite2D" parent="."]
+position = Vector2(742.5, 842.5)
+texture = ExtResource("3_cajon")

@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ccci15hdd20k1" path="res://assets/art/interactables/Celular_Prendido.png" id="2_16d4r"]
 
 [node name="Celular" type="CanvasLayer" unique_id=938096015]
-offset = Vector2(540, 540)
-transform = Transform2D(1, 0, 0, 1, 540, 540)
+offset = Vector2(1360, 200)
+transform = Transform2D(1, 0, 0, 1, 1360, 200)
 script = ExtResource("1_4xqkg")
 
 [node name="Control" type="Control" parent="." unique_id=1528880442]
@@ -23,6 +23,10 @@ texture = ExtResource("2_16d4r")
 
 [node name="PanelNotificaciones" parent="Control" unique_id=1807699952 instance=ExtResource("1_ttg56")]
 layout_mode = 0
+offset_left = 60.0
+offset_top = 220.0
+offset_right = 440.0
+offset_bottom = 350.0
 
 [node name="Timer" type="Timer" parent="." unique_id=299010580]
 

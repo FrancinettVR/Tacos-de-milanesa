@@ -136,7 +136,7 @@ texture = ExtResource("7_ropa5")
 shape = SubResource("RectangleShape2D_ropa5")
 
 [node name="Ropa6" type="Area2D" parent="." unique_id=1067523525 node_paths=PackedStringArray("canasto")]
-position = Vector2(4769, 776)
+position = Vector2(4751, 798)
 script = ExtResource("2_ropa")
 canasto = NodePath("../Canasto")
 
@@ -147,7 +147,7 @@ texture = ExtResource("8_ropa6")
 shape = SubResource("RectangleShape2D_ropa6")
 
 [node name="Ropa7" type="Area2D" parent="." unique_id=926554323 node_paths=PackedStringArray("canasto")]
-position = Vector2(4818, 861)
+position = Vector2(4818, 883)
 script = ExtResource("2_ropa")
 canasto = NodePath("../Canasto")
 

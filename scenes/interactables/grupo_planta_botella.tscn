@@ -16,6 +16,7 @@ size = Vector2(254, 307)
 size = Vector2(57, 141)
 
 [node name="Grupo-planta-botella" type="Node2D" unique_id=1969240675]
+position = Vector2(1860, 119)
 
 [node name="ContenedorReferencias" type="Node2D" parent="." unique_id=1474689469]
 visible = false
@@ -35,7 +36,7 @@ texture = ExtResource("3_uk27a")
 centered = false
 
 [node name="Planta" type="Area2D" parent="." unique_id=2057492867]
-position = Vector2(-210, 420)
+position = Vector2(833, 347)
 script = ExtResource("1_xeglg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Planta" unique_id=676090356]
@@ -49,14 +50,14 @@ shape = SubResource("RectangleShape2D_u0ya7")
 stream = ExtResource("4_agua")
 
 [node name="Botella" type="Area2D" parent="." unique_id=802681578 node_paths=PackedStringArray("planta")]
-position = Vector2(-45, 333)
+position = Vector2(998, 260)
 script = ExtResource("3_aodf0")
 planta = NodePath("../Planta")
 
 [node name="Sprite2D" type="Sprite2D" parent="Botella" unique_id=1899449396]
-position = Vector2(-431, -112)
+position = Vector2(-431, -87)
 texture = ExtResource("3_botella")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Botella" unique_id=226884821]
-position = Vector2(-433, -89)
+position = Vector2(-433, -64)
 shape = SubResource("RectangleShape2D_dtglo")

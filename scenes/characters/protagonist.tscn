@@ -1,44 +1,44 @@
 [gd_scene format=3 uid="uid://bukkpu717fis7"]
 
-[ext_resource type="Script" path="res://scenes/characters/protagonist.gd" id="1_protagonist"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0000.png" id="2_d0"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0001.png" id="3_d1"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0002.png" id="4_d2"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0003.png" id="5_d3"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0004.png" id="6_d4"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0005.png" id="7_d5"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0006.png" id="8_d6"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0007.png" id="9_d7"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0008.png" id="10_d8"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0009.png" id="11_d9"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0010.png" id="12_d10"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0011.png" id="13_d11"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0012.png" id="14_d12"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0013.png" id="15_d13"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0014.png" id="16_d14"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0015.png" id="17_d15"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0016.png" id="18_d16"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Derecha/Derecha_0017.png" id="19_d17"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0000.png" id="20_i0"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0001.png" id="21_i1"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0002.png" id="22_i2"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0003.png" id="23_i3"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0004.png" id="24_i4"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0005.png" id="25_i5"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0006.png" id="26_i6"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0007.png" id="27_i7"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0008.png" id="28_i8"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0009.png" id="29_i9"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0010.png" id="30_i10"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0011.png" id="31_i11"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0012.png" id="32_i12"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0013.png" id="33_i13"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0014.png" id="34_i14"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0015.png" id="35_i15"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0016.png" id="36_i16"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0017.png" id="37_i17"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Reposo/ReposoDer.png" id="38_rder"]
-[ext_resource type="Texture2D" path="res://assets/art/characters/protagonist/Reposo/ReposoIzq.png" id="39_rizq"]
+[ext_resource type="Script" uid="uid://2iijyypjxj4u" path="res://scenes/characters/protagonist.gd" id="1_protagonist"]
+[ext_resource type="Texture2D" uid="uid://u87f8wd7bxqf" path="res://assets/art/characters/protagonist/Derecha/Derecha_0000.png" id="2_d0"]
+[ext_resource type="Texture2D" uid="uid://basqyff5f02nv" path="res://assets/art/characters/protagonist/Derecha/Derecha_0001.png" id="3_d1"]
+[ext_resource type="Texture2D" uid="uid://btj335w256frd" path="res://assets/art/characters/protagonist/Derecha/Derecha_0002.png" id="4_d2"]
+[ext_resource type="Texture2D" uid="uid://ni6jiw3vnnuk" path="res://assets/art/characters/protagonist/Derecha/Derecha_0003.png" id="5_d3"]
+[ext_resource type="Texture2D" uid="uid://b55jt75h807bs" path="res://assets/art/characters/protagonist/Derecha/Derecha_0004.png" id="6_d4"]
+[ext_resource type="Texture2D" uid="uid://bk1lbjjefu71j" path="res://assets/art/characters/protagonist/Derecha/Derecha_0005.png" id="7_d5"]
+[ext_resource type="Texture2D" uid="uid://3orspxlx8hd5" path="res://assets/art/characters/protagonist/Derecha/Derecha_0006.png" id="8_d6"]
+[ext_resource type="Texture2D" uid="uid://c5l6cant3uvuk" path="res://assets/art/characters/protagonist/Derecha/Derecha_0007.png" id="9_d7"]
+[ext_resource type="Texture2D" uid="uid://cqhqtxwjchkgu" path="res://assets/art/characters/protagonist/Derecha/Derecha_0008.png" id="10_d8"]
+[ext_resource type="Texture2D" uid="uid://drch2j5lqmnwd" path="res://assets/art/characters/protagonist/Derecha/Derecha_0009.png" id="11_d9"]
+[ext_resource type="Texture2D" uid="uid://b4w7tesse33f" path="res://assets/art/characters/protagonist/Derecha/Derecha_0010.png" id="12_d10"]
+[ext_resource type="Texture2D" uid="uid://mau6f36n4alr" path="res://assets/art/characters/protagonist/Derecha/Derecha_0011.png" id="13_d11"]
+[ext_resource type="Texture2D" uid="uid://dwk5hx5sf4lc3" path="res://assets/art/characters/protagonist/Derecha/Derecha_0012.png" id="14_d12"]
+[ext_resource type="Texture2D" uid="uid://d2u04tx0sphpt" path="res://assets/art/characters/protagonist/Derecha/Derecha_0013.png" id="15_d13"]
+[ext_resource type="Texture2D" uid="uid://bjxoo7uaebeua" path="res://assets/art/characters/protagonist/Derecha/Derecha_0014.png" id="16_d14"]
+[ext_resource type="Texture2D" uid="uid://u6c38v354qfr" path="res://assets/art/characters/protagonist/Derecha/Derecha_0015.png" id="17_d15"]
+[ext_resource type="Texture2D" uid="uid://cg5wg6dpg81jf" path="res://assets/art/characters/protagonist/Derecha/Derecha_0016.png" id="18_d16"]
+[ext_resource type="Texture2D" uid="uid://btdvvi30dmgll" path="res://assets/art/characters/protagonist/Derecha/Derecha_0017.png" id="19_d17"]
+[ext_resource type="Texture2D" uid="uid://dpsnsmvw8dmlv" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0000.png" id="20_i0"]
+[ext_resource type="Texture2D" uid="uid://cbgv20fc43ux8" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0001.png" id="21_i1"]
+[ext_resource type="Texture2D" uid="uid://cte6vcdlf3ldp" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0002.png" id="22_i2"]
+[ext_resource type="Texture2D" uid="uid://dmc08x40l7djp" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0003.png" id="23_i3"]
+[ext_resource type="Texture2D" uid="uid://dfaa6bn37k616" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0004.png" id="24_i4"]
+[ext_resource type="Texture2D" uid="uid://j27hvbu77763" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0005.png" id="25_i5"]
+[ext_resource type="Texture2D" uid="uid://dxqh4v7oyxoq0" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0006.png" id="26_i6"]
+[ext_resource type="Texture2D" uid="uid://ynef44e52x4g" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0007.png" id="27_i7"]
+[ext_resource type="Texture2D" uid="uid://cl3hha4a5afnt" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0008.png" id="28_i8"]
+[ext_resource type="Texture2D" uid="uid://gmmvahxnh0vt" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0009.png" id="29_i9"]
+[ext_resource type="Texture2D" uid="uid://3nmd5tpup24f" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0010.png" id="30_i10"]
+[ext_resource type="Texture2D" uid="uid://bhr660eebf8rf" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0011.png" id="31_i11"]
+[ext_resource type="Texture2D" uid="uid://5eor30aysmnb" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0012.png" id="32_i12"]
+[ext_resource type="Texture2D" uid="uid://b2kdn6govt3ne" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0013.png" id="33_i13"]
+[ext_resource type="Texture2D" uid="uid://44f30p6biidx" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0014.png" id="34_i14"]
+[ext_resource type="Texture2D" uid="uid://kr0hv6smh15h" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0015.png" id="35_i15"]
+[ext_resource type="Texture2D" uid="uid://0d35s7amiihw" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0016.png" id="36_i16"]
+[ext_resource type="Texture2D" uid="uid://cfwjgul3b6445" path="res://assets/art/characters/protagonist/Izquierda/Izquierda_0017.png" id="37_i17"]
+[ext_resource type="Texture2D" uid="uid://de5i7or4a0dvk" path="res://assets/art/characters/protagonist/Reposo/ReposoDer.png" id="38_rder"]
+[ext_resource type="Texture2D" uid="uid://bt602c4y52sr3" path="res://assets/art/characters/protagonist/Reposo/ReposoIzq.png" id="39_rizq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_protagonist"]
 animations = [{
@@ -97,7 +97,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("19_d17")
 }],
-"loop": true,
+"loop": 1,
 "name": &"caminar_derecha",
 "speed": 12.0
 }, {
@@ -156,7 +156,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("37_i17")
 }],
-"loop": true,
+"loop": 1,
 "name": &"caminar_izquierda",
 "speed": 12.0
 }, {
@@ -164,7 +164,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("38_rder")
 }],
-"loop": false,
+"loop": 0,
 "name": &"reposo_derecha",
 "speed": 1.0
 }, {
@@ -172,7 +172,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("39_rizq")
 }],
-"loop": false,
+"loop": 0,
 "name": &"reposo_izquierda",
 "speed": 1.0
 }]
@@ -181,22 +181,21 @@ animations = [{
 radius = 120.0
 height = 700.0
 
-[node name="Protagonist" type="CharacterBody2D"]
+[node name="Protagonist" type="CharacterBody2D" unique_id=662644447]
 script = ExtResource("1_protagonist")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=975220337]
 sprite_frames = SubResource("SpriteFrames_protagonist")
 animation = &"reposo_derecha"
 autoplay = "reposo_derecha"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=506273060]
 shape = SubResource("CapsuleShape2D_body")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=911774548]
 position = Vector2(0, -150)
 limit_left = 0
 limit_top = 0
 limit_right = 5760
 limit_bottom = 1080
-position_smoothing_enabled = true
 editor_draw_limits = true

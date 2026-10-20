@@ -2,19 +2,86 @@
 
 [ext_resource type="Script" uid="uid://bsgptkdnlkuq1" path="res://scenes/ui/dialogue_ui.gd" id="1_y3syv"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tarjeta"]
+bg_color = Color(0.101961, 0.105882, 0.141176, 0.941176)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.729412, 0.580392, 0.705882)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.509804)
+shadow_size = 14
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_texto"]
+font_size = 22
+font_color = Color(0.960784, 0.94902, 0.921569, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 0.6)
+
 [node name="DialogueUI" type="CanvasLayer" unique_id=1301810073]
+layer = 20
 script = ExtResource("1_y3syv")
 
-[node name="PanelDialogo" type="Panel" parent="." unique_id=1756766092]
-anchors_preset = 12
-anchor_top = 1.0
+[node name="BloqueoModal" type="Control" parent="." unique_id=1528880442]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondoAtenuado" type="ColorRect" parent="BloqueoModal" unique_id=718193071]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.313726)
+
+[node name="TarjetaDialogo" type="PanelContainer" parent="BloqueoModal" unique_id=1756766092]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -230.0
+offset_right = 480.0
+offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tarjeta")
 
-[node name="ContenedorOpciones" type="HBoxContainer" parent="PanelDialogo" unique_id=64146187]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Margen" type="MarginContainer" parent="BloqueoModal/TarjetaDialogo" unique_id=1807699952]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 22
+
+[node name="Contenido" type="VBoxContainer" parent="BloqueoModal/TarjetaDialogo/Margen" unique_id=938096015]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="LabelTexto" type="Label" parent="BloqueoModal/TarjetaDialogo/Margen/Contenido" unique_id=493990084]
+layout_mode = 2
+text = "ejemplo"
+label_settings = SubResource("LabelSettings_texto")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ContenedorOpciones" type="HBoxContainer" parent="BloqueoModal/TarjetaDialogo/Margen/Contenido" unique_id=64146187]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 24
+alignment = 1

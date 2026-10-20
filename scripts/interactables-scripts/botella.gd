@@ -5,11 +5,12 @@ class_name Botella
 @export var planta: Node
 
 var textura_llena = preload("res://assets/art/Zona2/Botella.png")
+var textura_vacia = preload("res://assets/art/Zona2/BotellaVacía.png")
 
 func al_iniciar() -> void:
 	if id.is_empty():
 		id = "botella"
-	sprite.texture = textura_llena
+	sprite.texture = textura_vacia if usada else textura_llena
 
 ## Comprueba si la botella fue soltada encima 
 func objetivo_valido() -> bool:
@@ -20,6 +21,6 @@ func objetivo_valido() -> bool:
 	return false
 
 func on_interaccion_exitosa() -> void:
-	# No hay arte para botella vacía, por lo que mantiene su estado lleno
+	sprite.texture = textura_vacia
 	if planta and planta.has_method("regar"):
 		planta.regar()

@@ -16,6 +16,8 @@ func _process(_delta: float) -> void:
 
 ## Se ejecuta cuando el jugador hace clic en cualquier parte del escenario
 func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if DialogueUi and DialogueUi.esta_abierto():
+		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		# get_global_mouse_position().x obtiene la coordenada X real en el mundo (0 a 5760 px)
 		protagonist.walk_to(get_global_mouse_position().x)

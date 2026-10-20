@@ -11,6 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://rppdbd35f0ed" path="res://assets/art/Zona2/Referencia.jpg" id="9_ref2"]
 [ext_resource type="Texture2D" uid="uid://cp5bhdrk87ypu" path="res://assets/art/Zona3/Referencia.jpg" id="10_ref3"]
 [ext_resource type="PackedScene" uid="uid://cxvd8524671ma" path="res://scenes/environment/habitacion_3d.tscn" id="11_habitacion_3d"]
+[ext_resource type="PackedScene" uid="uid://drv3yrvcfs7xx" path="res://scenes/interactables/puerta.tscn" id="12_puerta"]
+[ext_resource type="PackedScene" uid="uid://b3v4cg0mi4sq3" path="res://scenes/interactables/postits.tscn" id="13_postits"]
+[ext_resource type="PackedScene" uid="uid://bvymkswc8e0au" path="res://scenes/interactables/taza_bebible.tscn" id="14_taza"]
+[ext_resource type="PackedScene" uid="uid://dnr841fi7228v" path="res://scenes/ui/celular.tscn" id="15_celular"]
+[ext_resource type="PackedScene" uid="uid://po31c26ie6sj" path="res://scenes/environment/sprites_zona1.tscn" id="16_sprites_z1"]
+[ext_resource type="PackedScene" path="res://scenes/environment/sprites_zona2.tscn" id="17_sprites_z2"]
+[ext_resource type="PackedScene" uid="uid://bq7pughb4o13j" path="res://scenes/environment/sprites_zona3.tscn" id="18_sprites_z3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(5760, 1080)
@@ -37,6 +44,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="ContenedorReferencias" type="Node2D" parent="Env" unique_id=1325680018]
 visible = false
+modulate = Color(1, 0.95686275, 1, 0.3137255)
 
 [node name="Zona1_Ref" type="Sprite2D" parent="Env/ContenedorReferencias" unique_id=1484219070]
 texture = ExtResource("8_ref1")
@@ -75,8 +83,19 @@ render_target_update_mode = 4
 z_index = -1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=149278725]
-position = Vector2(2897, 567)
+position = Vector2(2882, 543)
 shape = SubResource("RectangleShape2D_m2g58")
+
+[node name="SpritesZona1" parent="." unique_id=561054777 instance=ExtResource("16_sprites_z1")]
+
+[node name="SpritesZona2" parent="." unique_id=205988232 instance=ExtResource("17_sprites_z2")]
+position = Vector2(1920, 0)
+
+[node name="SpritesZona3" parent="." unique_id=880289876 instance=ExtResource("18_sprites_z3")]
+position = Vector2(3522, 0)
+
+[node name="Puerta" parent="." unique_id=145473739 instance=ExtResource("12_puerta")]
+position = Vector2(221, 646)
 
 [node name="GrupoPlantaBotella" parent="." unique_id=673338440 instance=ExtResource("3_planta_botella")]
 position = Vector2(2110, 399)
@@ -92,3 +111,12 @@ position = Vector2(992, 631)
 position = Vector2(249, 711)
 
 [node name="SistemaEstres" parent="." unique_id=803834899 instance=ExtResource("7_estres")]
+
+[node name="Postits" parent="." unique_id=661812327 instance=ExtResource("13_postits")]
+position = Vector2(2300, -60)
+
+[node name="TazaBebible" parent="." unique_id=1470160608 instance=ExtResource("14_taza")]
+position = Vector2(2650, 620)
+
+[node name="Celular" parent="." unique_id=938096015 instance=ExtResource("15_celular")]
+visible = false
