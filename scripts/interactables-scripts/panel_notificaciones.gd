@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends VBoxContainer
 class_name PanelNotificaciones
 
 signal todas_descartadas

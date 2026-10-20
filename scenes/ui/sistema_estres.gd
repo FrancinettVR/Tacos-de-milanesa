@@ -59,6 +59,7 @@ var efecto_activo: bool = false
 
 func _ready() -> void:
 	add_to_group("sistema_estres")
+	panel_debug.visible = false
 	
 	# Inicializar valores de controles de debug
 	if slider_estres:

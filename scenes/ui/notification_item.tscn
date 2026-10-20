@@ -2,9 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://dmugnwwg0ro0p" path="res://assets/art/interactables/placeholders/notif1.png" id="2_xl0l0"]
 [ext_resource type="Script" uid="uid://bpg2n0vupch5c" path="res://scripts/interactables-scripts/notification_item.gd" id="2_xxltq"]
+[ext_resource type="Script" uid="uid://b4lnopj7q56w2" path="res://scripts/core/opcion_dialogo.gd" id="3_xl0l0"]
+
+[sub_resource type="Resource" id="Resource_xxltq"]
+script = ExtResource("3_xl0l0")
+texto = "Leer"
+metadata/_custom_type_script = "uid://b4lnopj7q56w2"
+
+[sub_resource type="Resource" id="Resource_xl0l0"]
+script = ExtResource("3_xl0l0")
+texto = "Descartar"
+delta_estres = -5.0
+metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [node name="NotificationItem" type="TextureButton" unique_id=493990084]
 offset_right = 40.0
 offset_bottom = 40.0
 texture_normal = ExtResource("2_xl0l0")
 script = ExtResource("2_xxltq")
+opciones = Array[ExtResource("3_xl0l0")]([SubResource("Resource_xxltq"), SubResource("Resource_xl0l0")])

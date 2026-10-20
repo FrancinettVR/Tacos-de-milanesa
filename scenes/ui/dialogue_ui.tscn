@@ -74,7 +74,6 @@ alignment = 1
 
 [node name="LabelTexto" type="Label" parent="BloqueoModal/TarjetaDialogo/Margen/Contenido" unique_id=493990084]
 layout_mode = 2
-text = "ejemplo"
 label_settings = SubResource("LabelSettings_texto")
 horizontal_alignment = 1
 vertical_alignment = 1

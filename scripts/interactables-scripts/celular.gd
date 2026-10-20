@@ -1,7 +1,7 @@
 extends CanvasLayer
 class_name Celular
 
-@export var intervalo: float = 10.0
+@export var intervalo: float = 20.0
 
 @onready var panel: PanelNotificaciones = $Control/PanelNotificaciones
 @onready var audio_vibracion: AudioStreamPlayer = $AudioVibracion
