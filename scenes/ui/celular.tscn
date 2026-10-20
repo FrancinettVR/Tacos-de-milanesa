@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ddt6pmgv1cf8" path="res://scripts/interactables-scripts/celular.gd" id="1_4xqkg"]
 [ext_resource type="PackedScene" uid="uid://wbhousru5amc" path="res://scenes/ui/panel_notificaciones.tscn" id="1_ttg56"]
 [ext_resource type="Texture2D" uid="uid://ccci15hdd20k1" path="res://assets/art/interactables/Celular_Prendido.png" id="2_16d4r"]
+[ext_resource type="AudioStream" uid="uid://chki1fwg2c31d" path="res://assets/audio/sfx/CELULAR_VIBRACION.wav" id="4_16d4r"]
 
 [node name="Celular" type="CanvasLayer" unique_id=938096015]
 offset = Vector2(1360, 200)
@@ -31,3 +32,4 @@ offset_bottom = 350.0
 [node name="Timer" type="Timer" parent="." unique_id=299010580]
 
 [node name="AudioVibracion" type="AudioStreamPlayer" parent="." unique_id=83383956]
+stream = ExtResource("4_16d4r")
