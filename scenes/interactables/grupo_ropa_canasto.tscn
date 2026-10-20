@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://chnvyqjui0fgx" path="res://assets/art/Zona3/Ropa8.png" id="10_ropa8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_canasto"]
-size = Vector2(200, 160)
+size = Vector2(200, 348)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ropa1"]
 size = Vector2(227, 132)
@@ -65,19 +65,18 @@ position = Vector2(4320, 787)
 script = ExtResource("1_canasto")
 
 [node name="Sprite2D" type="Sprite2D" parent="Canasto" unique_id=1220154793]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Canasto" unique_id=1597986359]
-visible = false
 offset_left = -100.0
 offset_top = -80.0
 offset_right = 100.0
-offset_bottom = 80.0
+offset_bottom = 271.0
 mouse_filter = 2
 color = Color(0.62, 0.44, 0.28, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Canasto" unique_id=2065722943]
+position = Vector2(0, 94)
 shape = SubResource("RectangleShape2D_canasto")
 
 [node name="Ropa1" type="Area2D" parent="." unique_id=63303164 node_paths=PackedStringArray("canasto")]

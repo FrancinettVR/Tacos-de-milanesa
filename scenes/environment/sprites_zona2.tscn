@@ -1,22 +1,42 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bxmcbii8wnxui"]
 
 [ext_resource type="Texture2D" uid="uid://rppdbd35f0ed" path="res://assets/art/Zona2/Referencia.jpg" id="1_ref2"]
 [ext_resource type="Texture2D" uid="uid://b1vl0btprbme6" path="res://assets/art/Zona2/Luz.png" id="2_luz"]
 [ext_resource type="Texture2D" uid="uid://c8ejuylndehm1" path="res://assets/art/Zona2/Cajón.png" id="3_cajon"]
+[ext_resource type="Texture2D" uid="uid://begwjj70a4ijt" path="res://assets/art/Zona2/Escritorio.PNG" id="4_escritorio"]
+[ext_resource type="Texture2D" uid="uid://bkvb6pgl1horf" path="res://assets/art/Zona2/Silla.PNG" id="5_silla"]
+[ext_resource type="Texture2D" uid="uid://eg51vywf0mgf" path="res://assets/art/Zona2/Reloj.PNG" id="6_reloj"]
+[ext_resource type="Texture2D" uid="uid://ch274e5knjx1e" path="res://assets/art/Zona3/Repisa.PNG" id="7_repisa"]
 
-[node name="zona 2" type="Node2D"]
+[node name="zona 2" type="Node2D" unique_id=922409936]
 
-[node name="ContenedorReferencias" type="Node2D" parent="."]
+[node name="ContenedorReferencias" type="Node2D" parent="." unique_id=1889751699]
 visible = false
 
-[node name="Zona2_Ref" type="Sprite2D" parent="ContenedorReferencias"]
+[node name="Zona2_Ref" type="Sprite2D" parent="ContenedorReferencias" unique_id=179554928]
 texture = ExtResource("1_ref2")
 centered = false
 
-[node name="Luz" type="Sprite2D" parent="."]
+[node name="Luz" type="Sprite2D" parent="." unique_id=277533224]
 position = Vector2(736.5, 120)
 texture = ExtResource("2_luz")
 
-[node name="Cajon" type="Sprite2D" parent="."]
-position = Vector2(742.5, 842.5)
+[node name="Reloj" type="Sprite2D" parent="." unique_id=593708879]
+position = Vector2(721.5, 359.5)
+texture = ExtResource("6_reloj")
+
+[node name="Repisa" type="Sprite2D" parent="." unique_id=489095752]
+position = Vector2(1406, 317)
+texture = ExtResource("7_repisa")
+
+[node name="Escritorio" type="Sprite2D" parent="." unique_id=777387846]
+position = Vector2(765, 895)
+texture = ExtResource("4_escritorio")
+
+[node name="Cajon" type="Sprite2D" parent="." unique_id=1607673707]
+position = Vector2(798, 832)
 texture = ExtResource("3_cajon")
+
+[node name="Silla" type="Sprite2D" parent="." unique_id=1848119572]
+position = Vector2(1220, 835)
+texture = ExtResource("5_silla")

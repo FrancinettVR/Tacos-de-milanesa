@@ -56,7 +56,7 @@ metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 [node name="Postits" type="Node2D" unique_id=661812327]
 
 [node name="Post_it" type="Area2D" parent="." unique_id=194745685]
-position = Vector2(510, 540)
+position = Vector2(358, 781)
 script = ExtResource("1_83pqt")
 texto_dialogo = ""
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_x06kb"), SubResource("Resource_hybkc")])
@@ -71,7 +71,7 @@ shape = SubResource("RectangleShape2D_u0ya7")
 stream = ExtResource("4_papel")
 
 [node name="Post_it2" type="Area2D" parent="." unique_id=1918279918]
-position = Vector2(440, 540)
+position = Vector2(661, 696)
 script = ExtResource("1_83pqt")
 texto_dialogo = ""
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_qcwpw"), SubResource("Resource_roqca")])
@@ -86,7 +86,7 @@ shape = SubResource("RectangleShape2D_u0ya7")
 stream = ExtResource("4_papel")
 
 [node name="Post_it3" type="Area2D" parent="." unique_id=2072123584]
-position = Vector2(510, 590)
+position = Vector2(571, 587)
 script = ExtResource("1_83pqt")
 texto_dialogo = ""
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_cvvug"), SubResource("Resource_dfbdf")])
@@ -102,7 +102,7 @@ shape = SubResource("RectangleShape2D_u0ya7")
 stream = ExtResource("4_papel")
 
 [node name="Post_it4" type="Area2D" parent="." unique_id=1971612915]
-position = Vector2(440, 590)
+position = Vector2(400, 593)
 script = ExtResource("1_83pqt")
 texto_dialogo = ""
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_xmc14"), SubResource("Resource_jgo5a")])

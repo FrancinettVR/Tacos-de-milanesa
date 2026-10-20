@@ -1,13 +1,8 @@
 [gd_scene format=3 uid="uid://n1ferxpt02bm"]
 
-[ext_resource type="Texture2D" uid="uid://csvjhi74ln8f6" path="res://assets/art/interactables/placeholders/compu.png" id="1_x06kb"]
-[ext_resource type="PackedScene" uid="uid://b3v4cg0mi4sq3" path="res://scenes/interactables/postits.tscn" id="2_hybkc"]
+[ext_resource type="PackedScene" uid="uid://b3v4cg0mi4sq3" path="res://scenes/interactables/postits.tscn" id="1_postits"]
 
 [node name="Monitor" type="Node2D" unique_id=499520717]
-position = Vector2(540, 540)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1770468927]
-texture = ExtResource("1_x06kb")
-
-[node name="Postits" parent="." unique_id=661812327 instance=ExtResource("2_hybkc")]
-position = Vector2(-437, -627)
+[node name="Postits" parent="." unique_id=661812327 instance=ExtResource("1_postits")]
+position = Vector2(-111, -17)

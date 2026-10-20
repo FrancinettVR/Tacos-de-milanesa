@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cp5bhdrk87ypu" path="res://assets/art/Zona3/Referencia.jpg" id="10_ref3"]
 [ext_resource type="PackedScene" uid="uid://cxvd8524671ma" path="res://scenes/environment/habitacion_3d.tscn" id="11_habitacion_3d"]
 [ext_resource type="PackedScene" uid="uid://drv3yrvcfs7xx" path="res://scenes/interactables/puerta.tscn" id="12_puerta"]
-[ext_resource type="PackedScene" uid="uid://b3v4cg0mi4sq3" path="res://scenes/interactables/postits.tscn" id="13_postits"]
+[ext_resource type="PackedScene" uid="uid://n1ferxpt02bm" path="res://scenes/interactables/monitor.tscn" id="13_monitor"]
 [ext_resource type="PackedScene" uid="uid://bvymkswc8e0au" path="res://scenes/interactables/taza_bebible.tscn" id="14_taza"]
 [ext_resource type="PackedScene" uid="uid://dnr841fi7228v" path="res://scenes/ui/celular.tscn" id="15_celular"]
 [ext_resource type="PackedScene" uid="uid://po31c26ie6sj" path="res://scenes/environment/sprites_zona1.tscn" id="16_sprites_z1"]
@@ -116,7 +116,7 @@ position = Vector2(249, 711)
 
 [node name="SistemaEstres" parent="." unique_id=803834899 instance=ExtResource("7_estres")]
 
-[node name="Postits" parent="." unique_id=661812327 instance=ExtResource("13_postits")]
+[node name="Monitor" parent="." unique_id=499520717 instance=ExtResource("13_monitor")]
 position = Vector2(2300, -60)
 
 [node name="TazaBebible" parent="." unique_id=1470160608 instance=ExtResource("14_taza")]

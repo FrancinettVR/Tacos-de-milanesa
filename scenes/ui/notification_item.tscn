@@ -16,8 +16,10 @@ delta_estres = -5.0
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [node name="NotificationItem" type="TextureButton" unique_id=493990084]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 234.0
+offset_bottom = 90.0
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_xl0l0")
 script = ExtResource("2_xxltq")
 opciones = Array[ExtResource("3_xl0l0")]([SubResource("Resource_xxltq"), SubResource("Resource_xl0l0")])

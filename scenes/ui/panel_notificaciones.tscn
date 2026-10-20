@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://dm4ufeei1y8id" path="res://scripts/interactables-scripts/panel_notificaciones.gd" id="1_us35v"]
 [ext_resource type="PackedScene" uid="uid://bqjwb7hbhhv4t" path="res://scenes/ui/notification_item.tscn" id="2_2hg6b"]
 
-[node name="PanelNotificaciones" type="VBoxContainer" unique_id=1900775265]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PanelNotificaciones" type="VBoxContainer" unique_id=1807699952]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
 script = ExtResource("1_us35v")
 notificacion_scene = ExtResource("2_2hg6b")
