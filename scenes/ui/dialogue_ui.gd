@@ -16,13 +16,14 @@ func esta_abierto() -> bool:
 	return visible
 
 ## Muestra el panel con el texto de pensamiento y un botón por cada opción recibida
-func mostrar_opciones(opciones: Array[OpcionDialogo], texto: String = "ejemplo") -> void:
+func mostrar_opciones(opciones: Array[OpcionDialogo], texto: String = "") -> void:
 	# Detener a la protagonista si estaba caminando hacia algún punto
 	var protagonista := get_tree().get_first_node_in_group("protagonista")
 	if protagonista and protagonista.has_method("stop"):
 		protagonista.stop()
 
 	label_texto.text = texto
+	label_texto.visible = not texto.is_empty()
 	_limpiar_botones()
 
 	var estilo_normal := _crear_estilo_boton(

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b8dvy7uq3e4fa" path="res://scenes/ui/sistema_estres.tscn" id="7_estres"]
 [ext_resource type="Texture2D" uid="uid://dq5elmq7skago" path="res://assets/art/Zona1/Referencia.jpg" id="8_ref1"]
 [ext_resource type="Texture2D" uid="uid://rppdbd35f0ed" path="res://assets/art/Zona2/Referencia.jpg" id="9_ref2"]
+[ext_resource type="PackedScene" uid="uid://e7bvr2snvy6k" path="res://scenes/interactables/cuadro.tscn" id="10_bbxli"]
 [ext_resource type="Texture2D" uid="uid://cp5bhdrk87ypu" path="res://assets/art/Zona3/Referencia.jpg" id="10_ref3"]
 [ext_resource type="PackedScene" uid="uid://cxvd8524671ma" path="res://scenes/environment/habitacion_3d.tscn" id="11_habitacion_3d"]
 [ext_resource type="PackedScene" uid="uid://drv3yrvcfs7xx" path="res://scenes/interactables/puerta.tscn" id="12_puerta"]
@@ -96,6 +97,9 @@ position = Vector2(3522, 0)
 
 [node name="Puerta" parent="." unique_id=145473739 instance=ExtResource("12_puerta")]
 position = Vector2(221, 646)
+
+[node name="Cuadro" parent="." unique_id=758152995 instance=ExtResource("10_bbxli")]
+position = Vector2(1304, 472)
 
 [node name="GrupoPlantaBotella" parent="." unique_id=673338440 instance=ExtResource("3_planta_botella")]
 position = Vector2(2110, 399)

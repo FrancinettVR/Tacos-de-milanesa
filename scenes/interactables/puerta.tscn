@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bkuo0urq12b4r" path="res://scenes/interactables/puerta.gd" id="1_vdxnk"]
 [ext_resource type="Texture2D" uid="uid://dum5pvwgu6gxb" path="res://assets/art/Zona1/Puerta_Cerrada.png" id="2_f3mlw"]
+[ext_resource type="AudioStream" uid="uid://dvjsxreo2u7fv" path="res://assets/audio/sfx/PUERTA_ABRE.mp3" id="3_f3mlw"]
+[ext_resource type="AudioStream" uid="uid://cmf4bnt4u1xqu" path="res://assets/audio/sfx/puertacierra.wav" id="4_es5rt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
 size = Vector2(380, 800)
@@ -17,4 +19,8 @@ texture = ExtResource("2_f3mlw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta" unique_id=773467991]
 shape = SubResource("RectangleShape2D_u0ya7")
 
-[node name="AudioPuerta" type="AudioStreamPlayer2D" parent="Puerta" unique_id=219373232]
+[node name="AudioAbrir" type="AudioStreamPlayer2D" parent="Puerta" unique_id=219373232]
+stream = ExtResource("3_f3mlw")
+
+[node name="AudioCerrar" type="AudioStreamPlayer2D" parent="Puerta" unique_id=1504817077]
+stream = ExtResource("4_es5rt")

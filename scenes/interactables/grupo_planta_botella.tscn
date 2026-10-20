@@ -38,10 +38,8 @@ centered = false
 [node name="Planta" type="Area2D" parent="." unique_id=2057492867]
 position = Vector2(-90, 347)
 script = ExtResource("1_xeglg")
-
 [node name="Sprite2D" type="Sprite2D" parent="Planta" unique_id=676090356]
 texture = ExtResource("2_planta2")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planta" unique_id=695305312]
 position = Vector2(-2, 20.5)
 shape = SubResource("RectangleShape2D_u0ya7")

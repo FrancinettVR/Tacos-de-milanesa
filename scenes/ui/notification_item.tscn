@@ -1,97 +1,25 @@
 [gd_scene format=3 uid="uid://bqjwb7hbhhv4t"]
 
-[ext_resource type="Script" uid="uid://bpg2n0vupch5c" path="res://scripts/interactables-scripts/notification_item.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dmugnwwg0ro0p" path="res://assets/art/interactables/placeholders/notif1.png" id="2_xl0l0"]
+[ext_resource type="Script" uid="uid://bpg2n0vupch5c" path="res://scripts/interactables-scripts/notification_item.gd" id="2_xxltq"]
+[ext_resource type="Script" uid="uid://b4lnopj7q56w2" path="res://scripts/core/opcion_dialogo.gd" id="3_xl0l0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
-bg_color = Color(0.960784, 0.964706, 0.980392, 0.941176)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.819608, 0.839216, 0.890196, 0.8)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-shadow_color = Color(0, 0, 0, 0.117647)
-shadow_size = 4
-shadow_offset = Vector2(0, 2)
+[sub_resource type="Resource" id="Resource_xxltq"]
+script = ExtResource("3_xl0l0")
+texto = "Leer"
+metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
-bg_color = Color(1, 1, 1, 0.980392)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.45098, 0.65098, 0.94902, 0.901961)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-shadow_color = Color(0, 0, 0, 0.156863)
-shadow_size = 6
-shadow_offset = Vector2(0, 2)
+[sub_resource type="Resource" id="Resource_xl0l0"]
+script = ExtResource("3_xl0l0")
+texto = "Descartar"
+delta_estres = -5.0
+metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
-bg_color = Color(0.901961, 0.905882, 0.941176, 0.960784)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.701961, 0.729412, 0.8, 0.9)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_app"]
-font_size = 11
-font_color = Color(0.301961, 0.352941, 0.45098, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_texto"]
-font_size = 13
-font_color = Color(0.121569, 0.129412, 0.160784, 1)
-
-[node name="NotificationItem" type="Button" unique_id=493990084]
-custom_minimum_size = Vector2(340, 68)
-offset_right = 340.0
-offset_bottom = 68.0
+[node name="NotificationItem" type="TextureButton" unique_id=493990084]
+offset_right = 234.0
+offset_bottom = 90.0
+size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
-theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
-script = ExtResource("1_script")
-
-[node name="Margen" type="MarginContainer" parent="." unique_id=109283741]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 14
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 14
-theme_override_constants/margin_bottom = 8
-
-[node name="VBox" type="VBoxContainer" parent="Margen" unique_id=293847192]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 4
-alignment = 1
-
-[node name="LabelApp" type="Label" parent="Margen/VBox" unique_id=123987456]
-layout_mode = 2
-text = "NOTIFICACIÓN"
-label_settings = SubResource("LabelSettings_app")
-
-[node name="LabelTexto" type="Label" parent="Margen/VBox" unique_id=789123456]
-layout_mode = 2
-text = "Reunión de equipo en 5 minutos"
-label_settings = SubResource("LabelSettings_texto")
-autowrap_mode = 2
-max_lines_visible = 2
+texture_normal = ExtResource("2_xl0l0")
+script = ExtResource("2_xxltq")
+opciones = Array[ExtResource("3_xl0l0")]([SubResource("Resource_xxltq"), SubResource("Resource_xl0l0")])

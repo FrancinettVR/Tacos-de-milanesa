@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://e7bvr2snvy6k"]
+
+[ext_resource type="Script" uid="uid://diwip4takscpr" path="res://scripts/interactables-scripts/cuadro.gd" id="1_3ktpe"]
+[ext_resource type="Texture2D" uid="uid://ccaudrs8pylyp" path="res://assets/art/Zona1/Cuadro.png" id="1_55e3j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(507, 174)
+
+[node name="Cuadro" type="Area2D" unique_id=758152995]
+script = ExtResource("1_3ktpe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1997664460]
+texture = ExtResource("1_55e3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=90977753]
+position = Vector2(5.5, 4)
+shape = SubResource("RectangleShape2D_u0ya7")

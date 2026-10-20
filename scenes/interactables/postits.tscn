@@ -8,12 +8,12 @@
 
 [sub_resource type="Resource" id="Resource_x06kb"]
 script = ExtResource("2_dfbdf")
-texto = "Leer los post-its"
+texto = "Leer"
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [sub_resource type="Resource" id="Resource_hybkc"]
 script = ExtResource("2_dfbdf")
-texto = "Tirarlos a la basura"
+texto = "Tirar"
 delta_estres = -5.0
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
@@ -22,34 +22,34 @@ size = Vector2(59, 46)
 
 [sub_resource type="Resource" id="Resource_qcwpw"]
 script = ExtResource("2_dfbdf")
-texto = "Leer los post-its"
+texto = "Leer"
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [sub_resource type="Resource" id="Resource_roqca"]
 script = ExtResource("2_dfbdf")
-texto = "Tirarlos a la basura"
+texto = "Tirar"
 delta_estres = -5.0
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [sub_resource type="Resource" id="Resource_cvvug"]
 script = ExtResource("2_dfbdf")
-texto = "Leer los post-its"
+texto = "Leer"
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [sub_resource type="Resource" id="Resource_dfbdf"]
 script = ExtResource("2_dfbdf")
-texto = "Tirarlos a la basura"
+texto = "Tirar"
 delta_estres = -5.0
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [sub_resource type="Resource" id="Resource_xmc14"]
 script = ExtResource("2_dfbdf")
-texto = "Leer los post-its"
+texto = "Leer"
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [sub_resource type="Resource" id="Resource_jgo5a"]
 script = ExtResource("2_dfbdf")
-texto = "Tirarlos a la basura"
+texto = "Tirar"
 delta_estres = -5.0
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
@@ -58,6 +58,7 @@ metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 [node name="Post_it" type="Area2D" parent="." unique_id=194745685]
 position = Vector2(358, 781)
 script = ExtResource("1_83pqt")
+texto_dialogo = ""
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_x06kb"), SubResource("Resource_hybkc")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it" unique_id=660277822]
@@ -72,6 +73,7 @@ stream = ExtResource("4_papel")
 [node name="Post_it2" type="Area2D" parent="." unique_id=1918279918]
 position = Vector2(661, 696)
 script = ExtResource("1_83pqt")
+texto_dialogo = ""
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_qcwpw"), SubResource("Resource_roqca")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it2" unique_id=310712322]
@@ -86,6 +88,7 @@ stream = ExtResource("4_papel")
 [node name="Post_it3" type="Area2D" parent="." unique_id=2072123584]
 position = Vector2(571, 587)
 script = ExtResource("1_83pqt")
+texto_dialogo = ""
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_cvvug"), SubResource("Resource_dfbdf")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it3" unique_id=1794412050]
@@ -101,6 +104,7 @@ stream = ExtResource("4_papel")
 [node name="Post_it4" type="Area2D" parent="." unique_id=1971612915]
 position = Vector2(400, 593)
 script = ExtResource("1_83pqt")
+texto_dialogo = ""
 opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_xmc14"), SubResource("Resource_jgo5a")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it4" unique_id=2061834743]

@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bypq2x1aeexub" path="res://assets/art/Zona1/Perchero3.png" id="4_perchero3"]
 [ext_resource type="Texture2D" uid="uid://chi3c6r6urq7r" path="res://assets/art/Zona1/Almohada1.png" id="5_almohada1"]
 [ext_resource type="Texture2D" uid="uid://demkwhjcg3acr" path="res://assets/art/Zona1/Almohada2.png" id="6_almohada2"]
-[ext_resource type="Texture2D" uid="uid://ccaudrs8pylyp" path="res://assets/art/Zona1/Cuadro.png" id="7_cuadro"]
-[ext_resource type="Texture2D" uid="uid://d1fnp62ea0b57" path="res://assets/art/Zona1/Perchero.PNG" id="8_perchero"]
+[ext_resource type="Texture2D" uid="uid://d1fnp62ea0b57" path="res://assets/art/Zona1/Perchero.PNG" id="7_perchero"]
 
 [node name="sprites zona 1" type="Node2D" unique_id=860211406]
 
@@ -18,13 +17,9 @@ visible = false
 texture = ExtResource("1_ref1")
 centered = false
 
-[node name="Cuadro" type="Sprite2D" parent="." unique_id=1322880527]
-position = Vector2(1304, 472.5)
-texture = ExtResource("7_cuadro")
-
-[node name="Perchero" type="Sprite2D" parent="."]
+[node name="Perchero" type="Sprite2D" parent="." unique_id=2083948192]
 position = Vector2(593, 509)
-texture = ExtResource("8_perchero")
+texture = ExtResource("7_perchero")
 
 [node name="Perchero1" type="Sprite2D" parent="." unique_id=1770943205]
 position = Vector2(500.5, 629.5)
