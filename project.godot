@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tacos de milanesa"
-run/main_scene="res://scenes/rooms/main_room.tscn"
+run/main_scene="res://scenes/intro/main_menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 EventBus="*uid://bjqd106s8ddqg"
 DialogueUi="*uid://cms1ub5xbi13d"
+GameManager="*res://scripts/core/game_manager.gd"
 
 [display]
 

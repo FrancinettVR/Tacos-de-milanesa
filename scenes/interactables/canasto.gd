@@ -12,10 +12,14 @@ func al_iniciar() -> void:
 	if id.is_empty():
 		id = "canasto"
 
+func es_disponible() -> bool:
+	return GameManager.puede_hacer_secundarias()
+
 func depositar_ropa() -> void:
 	prendas_depositadas += 1
 	# Al depositar todas las prendas requeridas, se completa la interacción
 	if prendas_depositadas >= total_prendas:
+		GameManager.marcar_ropa_ordenada()
 		intentar_interactuar()
 
 func on_interaccion_exitosa() -> void:

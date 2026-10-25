@@ -3,13 +3,36 @@ class_name DialogoUI
 
 ## Se emite cuando elige una opción
 signal opcion_elegida(opcion: OpcionDialogo)
+signal dialogo_cerrado
 
+@onready var bloqueo_modal: Control = $BloqueoModal
 @onready var label_texto: Label = $BloqueoModal/TarjetaDialogo/Margen/Contenido/LabelTexto
 @onready var contenedor_opciones: HBoxContainer = $BloqueoModal/TarjetaDialogo/Margen/Contenido/ContenedorOpciones
 
 func _ready() -> void:
 	visible = false
 	add_to_group("dialogo_ui")
+	if bloqueo_modal:
+		bloqueo_modal.gui_input.connect(_on_bloqueo_modal_gui_input)
+
+func _on_bloqueo_modal_gui_input(event: InputEvent) -> void:
+	if not visible:
+		return
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if contenedor_opciones.get_child_count() == 1:
+			var btn := contenedor_opciones.get_child(0) as Button
+			if btn and is_instance_valid(btn):
+				btn.pressed.emit()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not visible:
+		return
+	if event.is_action_pressed("ui_accept"):
+		if contenedor_opciones.get_child_count() > 0:
+			var btn := contenedor_opciones.get_child(0) as Button
+			if btn and is_instance_valid(btn):
+				btn.pressed.emit()
+				get_viewport().set_input_as_handled()
 
 ## Indica si la ventana de diálogo está activa actualmente
 func esta_abierto() -> bool:
@@ -62,10 +85,19 @@ func mostrar_opciones(opciones: Array[OpcionDialogo], texto: String = "") -> voi
 
 	visible = true
 
+## Muestra un pensamiento 
+func mostrar_pensamiento(texto: String, texto_boton: String = "Continuar") -> void:
+	var opc := OpcionDialogo.new()
+	opc.texto = texto_boton
+	opc.delta_estres = 0.0
+	var lista: Array[OpcionDialogo] = [opc]
+	mostrar_opciones(lista, texto)
+
 func _on_opcion_pressed(opcion: OpcionDialogo) -> void:
 	visible = false
 	_limpiar_botones()
 	opcion_elegida.emit(opcion)
+	dialogo_cerrado.emit()
 
 func _limpiar_botones() -> void:
 	for child in contenedor_opciones.get_children():

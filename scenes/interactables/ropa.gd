@@ -8,6 +8,9 @@ func al_iniciar() -> void:
 	if id.is_empty():
 		id = "ropa"
 
+func es_disponible() -> bool:
+	return GameManager.puede_hacer_secundarias()
+
 ## Comprueba si se soltó sobre el canasto
 func objetivo_valido() -> bool:
 	var areas = get_overlapping_areas()

@@ -2,7 +2,7 @@ extends Area2D
 class_name Interactable
 
 @export var id: String = ""
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: Sprite2D = get_node_or_null("Sprite2D")
 
 var usada: bool = false
 
@@ -20,6 +20,8 @@ func intentar_interactuar() -> void:
 		return
 	if not es_disponible():
 		EventBus.interaccion_bloqueada.emit(id)
+		if DialogueUi:
+			DialogueUi.mostrar_pensamiento("No puedo ocuparme de esto con tanto trabajo pendiente")
 		return
 	interactuar()
 

@@ -50,23 +50,9 @@ func _ready() -> void:
 	_configurar_camara()
 	_actualizar_iluminacion()
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode == KEY_F2:
-			modo_sin_luz = not modo_sin_luz
-			print("[Fondo 3D] Modo iluminación: %s (F2)" % ("Sin Luz (Unshaded)" if modo_sin_luz else "Con Iluminación (PBR)"))
-		elif event.keycode == KEY_F3:
-			cam_altura_y -= 0.02
-			print("[Fondo 3D] cam_altura_y: %.3f (F3/F4 ajusta altura)" % cam_altura_y)
-		elif event.keycode == KEY_F4:
-			cam_altura_y += 0.02
-			print("[Fondo 3D] cam_altura_y: %.3f (F3/F4 ajusta altura)" % cam_altura_y)
-		elif event.keycode == KEY_F5:
-			cam_orto_size -= 0.02
-			print("[Fondo 3D] cam_orto_size: %.3f (F5/F6 ajusta tamaño)" % cam_orto_size)
-		elif event.keycode == KEY_F6:
-			cam_orto_size += 0.02
-			print("[Fondo 3D] cam_orto_size: %.3f (F5/F6 ajusta tamaño)" % cam_orto_size)
+func _unhandled_input(_event: InputEvent) -> void:
+	# Teclas de depuración F2-F6 desactivadas para el juego
+	pass
 
 func _configurar_materiales() -> void:
 	_materiales.clear()

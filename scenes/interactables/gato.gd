@@ -21,6 +21,8 @@ func on_interaccion_exitosa() -> void:
 	if (audio_ronroneo and audio_ronroneo.is_playing()) or (audio_maullido and audio_maullido.is_playing()):
 		return
 	
+	GameManager.modificar_estres(-21.0)
+	
 	# random entre ronroneo y maullido
 	if randf() < 0.5:
 		if audio_ronroneo:

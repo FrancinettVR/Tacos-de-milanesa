@@ -19,6 +19,7 @@ var _esta_animando: bool = false
 var apagado: bool = false
 
 func _ready() -> void:
+	add_to_group("celular")
 	visible = false
 	offset.y = _pos_oculta_y
 	panel.todas_descartadas.connect(_on_todas_descartadas)
@@ -78,10 +79,10 @@ func _on_boton_apagar_pressed() -> void:
 	
 	var opc_apagar := OpcionDialogo.new()
 	opc_apagar.texto = "Apagar el teléfono"
-	opc_apagar.delta_estres = -5.0
+	opc_apagar.delta_estres = 0.0
 	
 	var opc_dejar := OpcionDialogo.new()
-	opc_dejar.texto = "Dejarlo así"
+	opc_dejar.texto = "Dejarlo encendido"
 	opc_dejar.delta_estres = 0.0
 	
 	var dialogo := get_tree().get_first_node_in_group("dialogo_ui") as DialogoUI
@@ -92,10 +93,13 @@ func _on_boton_apagar_pressed() -> void:
 		dialogo.opcion_elegida.disconnect(_on_dialogo_opcion_elegida)
 	
 	dialogo.opcion_elegida.connect(_on_dialogo_opcion_elegida, CONNECT_ONE_SHOT)
-	dialogo.mostrar_opciones([opc_apagar, opc_dejar], "Deberia?")
+	var texto_duda := "¿Y si alguien me necesita con urgencia del trabajo? Van a pensar que soy irresponsable..."
+	var lista_opciones: Array[OpcionDialogo] = [opc_apagar, opc_dejar]
+	dialogo.mostrar_opciones(lista_opciones, texto_duda)
 
 func _on_dialogo_opcion_elegida(opcion: OpcionDialogo) -> void:
 	if opcion.texto == "Apagar el teléfono":
+		GameManager.marcar_celular_apagado()
 		apagar_telefono()
 
 func apagar_telefono() -> void:

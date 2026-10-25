@@ -2,64 +2,18 @@
 
 [ext_resource type="Script" uid="uid://cdo45ct70duc7" path="res://scenes/interactables/post_it.gd" id="1_83pqt"]
 [ext_resource type="Texture2D" uid="uid://cj277qknu8xkx" path="res://assets/art/Zona2/Postit1.png" id="2_cvvug"]
-[ext_resource type="Script" uid="uid://b4lnopj7q56w2" path="res://scripts/core/opcion_dialogo.gd" id="2_dfbdf"]
 [ext_resource type="Texture2D" uid="uid://65dqs3mw24qu" path="res://assets/art/Zona2/Postit2.png" id="3_dfbdf"]
 [ext_resource type="AudioStream" uid="uid://b5yae3jmvh261" path="res://assets/audio/sfx/BOLLITOPAPEL.wav" id="4_papel"]
 
-[sub_resource type="Resource" id="Resource_x06kb"]
-script = ExtResource("2_dfbdf")
-texto = "Leer"
-metadata/_custom_type_script = "uid://b4lnopj7q56w2"
-
-[sub_resource type="Resource" id="Resource_hybkc"]
-script = ExtResource("2_dfbdf")
-texto = "Tirar"
-delta_estres = -5.0
-metadata/_custom_type_script = "uid://b4lnopj7q56w2"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
 size = Vector2(59, 46)
-
-[sub_resource type="Resource" id="Resource_qcwpw"]
-script = ExtResource("2_dfbdf")
-texto = "Leer"
-metadata/_custom_type_script = "uid://b4lnopj7q56w2"
-
-[sub_resource type="Resource" id="Resource_roqca"]
-script = ExtResource("2_dfbdf")
-texto = "Tirar"
-delta_estres = -5.0
-metadata/_custom_type_script = "uid://b4lnopj7q56w2"
-
-[sub_resource type="Resource" id="Resource_cvvug"]
-script = ExtResource("2_dfbdf")
-texto = "Leer"
-metadata/_custom_type_script = "uid://b4lnopj7q56w2"
-
-[sub_resource type="Resource" id="Resource_dfbdf"]
-script = ExtResource("2_dfbdf")
-texto = "Tirar"
-delta_estres = -5.0
-metadata/_custom_type_script = "uid://b4lnopj7q56w2"
-
-[sub_resource type="Resource" id="Resource_xmc14"]
-script = ExtResource("2_dfbdf")
-texto = "Leer"
-metadata/_custom_type_script = "uid://b4lnopj7q56w2"
-
-[sub_resource type="Resource" id="Resource_jgo5a"]
-script = ExtResource("2_dfbdf")
-texto = "Tirar"
-delta_estres = -5.0
-metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [node name="Postits" type="Node2D" unique_id=661812327]
 
 [node name="Post_it" type="Area2D" parent="." unique_id=194745685]
 position = Vector2(358, 781)
 script = ExtResource("1_83pqt")
-texto_dialogo = ""
-opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_x06kb"), SubResource("Resource_hybkc")])
+texto_encargo = "Entrega urgente para mañana a las 9:00 AM sin falta. Cambiar toda la paleta de color del cliente."
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it" unique_id=660277822]
 texture = ExtResource("2_cvvug")
@@ -73,8 +27,7 @@ stream = ExtResource("4_papel")
 [node name="Post_it2" type="Area2D" parent="." unique_id=1918279918]
 position = Vector2(661, 696)
 script = ExtResource("1_83pqt")
-texto_dialogo = ""
-opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_qcwpw"), SubResource("Resource_roqca")])
+texto_encargo = "Revisar correcciones del informe final v4_definitivo_FINAL. Corregir gráficos de la página 12."
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it2" unique_id=310712322]
 texture = ExtResource("3_dfbdf")
@@ -88,8 +41,7 @@ stream = ExtResource("4_papel")
 [node name="Post_it3" type="Area2D" parent="." unique_id=2072123584]
 position = Vector2(571, 587)
 script = ExtResource("1_83pqt")
-texto_dialogo = ""
-opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_cvvug"), SubResource("Resource_dfbdf")])
+texto_encargo = "Factura pendiente mes pasado: llamar al contador antes de las 18:00. Pagar arriendo y cuentas."
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it3" unique_id=1794412050]
 texture = ExtResource("2_cvvug")
@@ -104,8 +56,7 @@ stream = ExtResource("4_papel")
 [node name="Post_it4" type="Area2D" parent="." unique_id=1971612915]
 position = Vector2(400, 593)
 script = ExtResource("1_83pqt")
-texto_dialogo = ""
-opciones = Array[ExtResource("2_dfbdf")]([SubResource("Resource_xmc14"), SubResource("Resource_jgo5a")])
+texto_encargo = "Reunión de emergencia con el equipo de marketing 15:30. Preparar presentación y avances."
 
 [node name="Sprite2D" type="Sprite2D" parent="Post_it4" unique_id=2061834743]
 texture = ExtResource("3_dfbdf")

@@ -1,8 +1,36 @@
 [gd_scene format=3 uid="uid://n1ferxpt02bm"]
 
 [ext_resource type="PackedScene" uid="uid://b3v4cg0mi4sq3" path="res://scenes/interactables/postits.tscn" id="1_postits"]
+[ext_resource type="Script" path="res://scripts/interactables-scripts/computador.gd" id="2_computador"]
+[ext_resource type="AudioStream" uid="uid://cbywlm4lg4ocu" path="res://assets/audio/audio/OBJETOS/CELULAR/CELULAR_VIBRACION.wav" id="3_notif"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_screen"]
+size = Vector2(250, 170)
 
 [node name="Monitor" type="Node2D" unique_id=499520717]
+
+[node name="PantallaApagada" type="ColorRect" parent="." unique_id=1498112345]
+visible = false
+offset_left = 390.0
+offset_top = 595.0
+offset_right = 640.0
+offset_bottom = 765.0
+mouse_filter = 2
+color = Color(0.04, 0.05, 0.07, 0.95)
+
+[node name="Computador" type="Area2D" parent="." unique_id=1849182390]
+position = Vector2(515, 680)
+script = ExtResource("2_computador")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computador" unique_id=1849182391]
+shape = SubResource("RectangleShape2D_screen")
+
+[node name="TimerCorreo" type="Timer" parent="Computador" unique_id=1849182392]
+wait_time = 20.0
+
+[node name="AudioNotif" type="AudioStreamPlayer2D" parent="Computador" unique_id=1849182393]
+stream = ExtResource("3_notif")
+pitch_scale = 1.6
 
 [node name="Postits" parent="." unique_id=661812327 instance=ExtResource("1_postits")]
 position = Vector2(-111, -17)
