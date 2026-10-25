@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://po31c26ie6sj" path="res://scenes/environment/sprites_zona1.tscn" id="16_sprites_z1"]
 [ext_resource type="PackedScene" path="res://scenes/environment/sprites_zona2.tscn" id="17_sprites_z2"]
 [ext_resource type="PackedScene" uid="uid://bq7pughb4o13j" path="res://scenes/environment/sprites_zona3.tscn" id="18_sprites_z3"]
+[ext_resource type="AudioStream" uid="uid://cbywlm4lg4ocu" path="res://assets/audio/audio/OBJETOS/CELULAR/CELULAR_VIBRACION.wav" id="19_vibracion"]
+[ext_resource type="AudioStream" uid="uid://buf4o4kmfwwsr" path="res://assets/audio/audio/AMBIENTE/EXTERIOR/AMBIENTE-AVES.wav" id="20_aves"]
+[ext_resource type="AudioStream" uid="uid://8vk7323qcxw2" path="res://assets/audio/audio/AMBIENTE/EXTERIOR/VIENTO SUAVE.wav" id="21_viento"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2g58"]
 size = Vector2(5760, 1080)
@@ -111,16 +114,37 @@ position = Vector2(2110, 399)
 [node name="Gato" parent="." unique_id=1035416541 instance=ExtResource("6_gato")]
 position = Vector2(992, 631)
 
-[node name="Protagonist" parent="." unique_id=724815251 instance=ExtResource("2_protagonist")]
-position = Vector2(249, 711)
-
-[node name="SistemaEstres" parent="." unique_id=803834899 instance=ExtResource("7_estres")]
-
 [node name="Monitor" parent="." unique_id=499520717 instance=ExtResource("13_monitor")]
 position = Vector2(2300, -60)
 
 [node name="TazaBebible" parent="." unique_id=1470160608 instance=ExtResource("14_taza")]
-position = Vector2(2650, 620)
+position = Vector2(2730, 709)
+
+[node name="Protagonist" parent="." unique_id=724815251 instance=ExtResource("2_protagonist")]
+position = Vector2(2868, 711)
+
+[node name="SistemaEstres" parent="." unique_id=803834899 instance=ExtResource("7_estres")]
 
 [node name="Celular" parent="." unique_id=938096015 instance=ExtResource("15_celular")]
 visible = false
+
+[node name="IntroLayer" type="CanvasLayer" parent="." unique_id=424888849]
+layer = 10
+
+[node name="FondoNegro" type="ColorRect" parent="IntroLayer" unique_id=672243826]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioIntro" type="AudioStreamPlayer" parent="IntroLayer" unique_id=860031429]
+stream = ExtResource("19_vibracion")
+
+[node name="AudioAves" type="AudioStreamPlayer" parent="." unique_id=198273641]
+stream = ExtResource("20_aves")
+
+[node name="AudioViento" type="AudioStreamPlayer" parent="." unique_id=198273642]
+stream = ExtResource("21_viento")
+

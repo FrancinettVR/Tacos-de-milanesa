@@ -79,11 +79,9 @@ func _ready() -> void:
 	intensidad_visual_actual = calcular_intensidad_efecto(nivel_estres)
 	_actualizar_etiquetas_debug()
 
-func _unhandled_input(event: InputEvent) -> void:
-	# Presionar F1 para ocultar/mostrar el panel de depuración
-	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode == KEY_F1:
-			panel_debug.visible = not panel_debug.visible
+func _unhandled_input(_event: InputEvent) -> void:
+	# Tecla F1 desactivada para el juego
+	pass
 
 ## Calcula la intensidad visual (0.0 a 1.0) según las curvas de estrés
 func calcular_intensidad_efecto(estres: float) -> float:
@@ -99,6 +97,11 @@ func calcular_intensidad_efecto(estres: float) -> float:
 	var divisor: float = max(0.001, tope_estres_max - umbral_activacion_estres)
 	var factor: float = clamp((estres - umbral_activacion_estres) / divisor, 0.0, 1.0)
 	return lerp(intensidad_inicial, 1.0, factor)
+
+## Modifica el nivel de estrés. Acepta delta en puntos (ej. +8.0, -25.0) o fraccional (+0.08, -0.25).
+func modificar_estres(delta: float) -> void:
+	var cambio: float = delta if abs(delta) <= 1.0 else (delta / 100.0)
+	nivel_estres = clamp(nivel_estres + cambio, 0.0, 1.0)
 
 func _actualizar_estres() -> void:
 	if not is_inside_tree():
@@ -172,12 +175,11 @@ func _on_slider_oscurecimiento_changed(val: float) -> void:
 
 ## Métodos públicos para controlar el estrés desde el juego
 func set_estres(valor: float) -> void:
-	nivel_estres = valor
+	var v: float = valor if valor <= 1.0 else (valor / 100.0)
+	nivel_estres = clamp(v, 0.0, 1.0)
 	if slider_estres:
 		slider_estres.set_value_no_signal(nivel_estres * 100.0)
 
-func modificar_estres(delta: float) -> void:
-	set_estres(nivel_estres + delta)
-
 func get_estres() -> float:
 	return nivel_estres
+

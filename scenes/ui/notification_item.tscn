@@ -7,12 +7,13 @@
 [sub_resource type="Resource" id="Resource_xxltq"]
 script = ExtResource("3_xl0l0")
 texto = "Leer"
+delta_estres = 7.0
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [sub_resource type="Resource" id="Resource_xl0l0"]
 script = ExtResource("3_xl0l0")
 texto = "Descartar"
-delta_estres = -5.0
+delta_estres = 0.0
 metadata/_custom_type_script = "uid://b4lnopj7q56w2"
 
 [node name="NotificationItem" type="TextureButton" unique_id=493990084]

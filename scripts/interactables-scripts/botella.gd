@@ -12,6 +12,9 @@ func al_iniciar() -> void:
 		id = "botella"
 	sprite.texture = textura_vacia if usada else textura_llena
 
+func es_disponible() -> bool:
+	return GameManager.puede_hacer_secundarias()
+
 ## Comprueba si la botella fue soltada encima 
 func objetivo_valido() -> bool:
 	var areas = get_overlapping_areas()

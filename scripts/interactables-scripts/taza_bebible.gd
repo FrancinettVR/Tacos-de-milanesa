@@ -11,8 +11,19 @@ func al_iniciar() -> void:
 func on_interaccion_exitosa() -> void:
 	if audio_sorbo and audio_sorbo.stream:
 		audio_sorbo.play()
-	var sistema_estres = get_tree().get_first_node_in_group("sistema_estres")
-	if sistema_estres and sistema_estres.has_method("modificar_estres"):
-		sistema_estres.modificar_estres(-10.0)
+	
+	# Baja el estrés el equivalente a 2 notificaciones (-14 pts)
+	if GameManager:
+		GameManager.modificar_estres(-14.0)
+	
+	# Diálogo de pensamiento
+	var opc := OpcionDialogo.new()
+	opc.texto = "Continuar"
+	opc.delta_estres = 0.0
+	
+	if DialogueUi:
+		DialogueUi.mostrar_opciones([opc], "Sobrevivo a base de café")
+		await DialogueUi.dialogo_cerrado
+	
 	hide()
 	monitoring = false

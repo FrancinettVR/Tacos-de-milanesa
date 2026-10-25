@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://bkvb6pgl1horf" path="res://assets/art/Zona2/Silla.PNG" id="5_silla"]
 [ext_resource type="Texture2D" uid="uid://eg51vywf0mgf" path="res://assets/art/Zona2/Reloj.PNG" id="6_reloj"]
 [ext_resource type="Texture2D" uid="uid://ch274e5knjx1e" path="res://assets/art/Zona3/Repisa.PNG" id="7_repisa"]
+[ext_resource type="Script" path="res://scripts/interactables-scripts/reloj.gd" id="8_reloj_script"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_reloj"]
+radius = 80.0
 
 [node name="zona 2" type="Node2D" unique_id=922409936]
 
@@ -21,9 +25,18 @@ centered = false
 position = Vector2(736.5, 120)
 texture = ExtResource("2_luz")
 
-[node name="Reloj" type="Sprite2D" parent="." unique_id=593708879]
+[node name="Reloj" type="Area2D" parent="." unique_id=593708879]
 position = Vector2(721.5, 359.5)
+script = ExtResource("8_reloj_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="Reloj" unique_id=593708880]
 texture = ExtResource("6_reloj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reloj" unique_id=593708881]
+shape = SubResource("CircleShape2D_reloj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Reloj" unique_id=593708882]
+max_distance = 3000.0
 
 [node name="Repisa" type="Sprite2D" parent="." unique_id=489095752]
 position = Vector2(1406, 317)
